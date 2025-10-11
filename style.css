@@ -135,10 +135,10 @@ body {
 
 .avatar-ring {
     position: absolute;
-    top: -8px;
-    left: -8px;
-    width: 136px;
-    height: 136px;
+    top: 0;
+    left: 0;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
     border: 4px solid transparent;
     transition: all 0.3s ease;
@@ -294,8 +294,8 @@ body {
     }
 
     .avatar-ring {
-        width: 116px;
-        height: 116px;
+        width: 104px;
+        height: 104px;
     }
 
     .status-indicator {
