@@ -176,7 +176,7 @@ body {
 /* Hero Section */
 .hero {
     flex-grow: 1;
-    padding: 4rem 2rem;
+    padding: 4rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -372,7 +372,7 @@ body {
 
 /* Footer */
 .footer {
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .footer-content {
@@ -433,11 +433,15 @@ body {
     }
 
     .hero {
-        padding: 2rem 1rem;
+        padding: 2rem 0;
     }
 
     .footer {
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
     }
 
     .video-background {
@@ -499,10 +503,6 @@ body {
 
     .roast-text:hover {
         transform: none;
-    }
-
-    .footer {
-        padding: 1.5rem 0;
     }
 
     .tech-stack {
