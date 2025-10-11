@@ -9,7 +9,7 @@
     --text-secondary: #b5bac1;
     --text-muted: #80848e;
     --gradient-purple: linear-gradient(90deg, #8b5cf6 0%, #ec4899 100%);
-    --bg-beige: #f5e6d3;
+    --bg-beige: #F8F4C8;
 }
 
 * {
@@ -37,7 +37,7 @@ body {
     left: -10%;
     width: 120%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: left center;
     z-index: -2;
     filter: blur(0px);
@@ -62,8 +62,8 @@ body {
         to right,
         transparent 0%,
         transparent 40%,
-        rgba(245, 230, 211, 0.3) 60%,
-        rgba(245, 230, 211, 0.7) 80%,
+        rgba(248, 244, 200, 0.3) 60%,
+        rgba(248, 244, 200, 0.7) 80%,
         var(--bg-beige) 100%
     );
     pointer-events: none;
