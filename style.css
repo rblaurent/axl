@@ -225,39 +225,38 @@ body {
 
 /* Companions Preview */
 .companions-preview {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    margin: 1.5rem 0;
-    height: 60px;
+    margin-right: 0.75rem;
+    vertical-align: middle;
 }
 
 .companion-avatar {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    border: 3px solid var(--bg-dark);
+    border: 2px solid var(--bg-dark);
     object-fit: cover;
     transition: transform 0.3s ease, z-index 0.3s ease;
     position: relative;
 }
 
 .companion-avatar-1 {
-    z-index: 3;
+    z-index: 1;
 }
 
 .companion-avatar-2 {
     z-index: 2;
-    margin-left: -15px;
+    margin-left: -10px;
 }
 
 .companion-avatar-3 {
-    z-index: 1;
-    margin-left: -15px;
+    z-index: 3;
+    margin-left: -10px;
 }
 
 .companion-avatar:hover {
-    transform: translateY(-5px) scale(1.1);
+    transform: translateY(-3px) scale(1.1);
     z-index: 10;
 }
 
@@ -269,6 +268,9 @@ body {
     line-height: 1.6;
     opacity: 0.7;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-subtitle {
