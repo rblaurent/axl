@@ -130,17 +130,16 @@ body {
     object-fit: cover;
     position: relative;
     z-index: 2;
-    border: 4px solid var(--bg-dark);
 }
 
 .avatar-ring {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 128px;
-    height: 128px;
+    top: -6px;
+    left: -6px;
+    width: 132px;
+    height: 132px;
     border-radius: 50%;
-    border: 4px solid transparent;
+    border: 6px solid transparent;
     transition: all 0.3s ease;
     z-index: 1;
 }
@@ -294,8 +293,11 @@ body {
     }
 
     .avatar-ring {
-        width: 104px;
-        height: 104px;
+        top: -5px;
+        left: -5px;
+        width: 110px;
+        height: 110px;
+        border: 5px solid transparent;
     }
 
     .status-indicator {
