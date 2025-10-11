@@ -39,7 +39,12 @@
         <div class="container">
             <div class="content-box">
                 <div class="hero-content">
-                <h1 class="hero-title">Meet Axl!<span class="subtle-asterisk">*</span></h1>
+                <h1 class="hero-title">Meet Axl!</h1>
+                <div class="companions-preview">
+                    <img src="resources/axl.png" alt="Companion 1" class="companion-avatar companion-avatar-1">
+                    <img src="resources/axl.png" alt="Companion 2" class="companion-avatar companion-avatar-2">
+                    <img src="resources/axl.png" alt="Companion 3" class="companion-avatar companion-avatar-3">
+                </div>
                 <p class="hero-subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, laughs, and good vibes to your gaming sessions.</p>
 
                 <div class="roast-section">
@@ -71,7 +76,7 @@
                     </div>
                 </div>
 
-                <p class="persona-note">* Can't stand Axl? No worries! There are other companions available, and you can even create your own!</p>
+                <p class="persona-note">Can't stand Axl? No worries! There are other companions available, and you can even create your own!</p>
 
                 <div class="footer-content">
                     <p class="footer-text">Made with love ❤️ and coffee ☕</p>
@@ -86,7 +91,7 @@
         // Fetch and display version from update.xml
         async function fetchVersion() {
             try {
-                const response = await fetch('https://github.com/rblaurent/axl/releases/latest/download/update.xml');
+                const response = await fetch('update.xml');
                 const xmlText = await response.text();
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
