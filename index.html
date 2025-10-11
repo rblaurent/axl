@@ -66,6 +66,9 @@
                         </svg>
                         Download for Windows
                     </a>
+                    <div class="version-badge" id="versionBadge">
+                        <span class="version-text">Loading version...</span>
+                    </div>
                 </div>
 
                 <p class="persona-note">* Can't stand Axl? No worries! There are other companions available, and you can even create your own!</p>
@@ -80,6 +83,29 @@
     </section>
 
     <script>
+        // Fetch and display version from update.xml
+        async function fetchVersion() {
+            try {
+                const response = await fetch('https://github.com/rblaurent/axl/releases/latest/download/update.xml');
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const version = xmlDoc.querySelector('version')?.textContent;
+
+                if (version) {
+                    document.getElementById('versionBadge').innerHTML = `<span class="version-text">Version ${version}</span>`;
+                } else {
+                    document.getElementById('versionBadge').innerHTML = '<span class="version-text">Latest version</span>';
+                }
+            } catch (error) {
+                console.error('Failed to fetch version:', error);
+                document.getElementById('versionBadge').innerHTML = '<span class="version-text">Latest version</span>';
+            }
+        }
+
+        // Fetch version on page load
+        fetchVersion();
+
         // Video background - play after delay
         const bgVideo = document.getElementById('bgVideo');
         setTimeout(() => {

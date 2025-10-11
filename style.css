@@ -170,6 +170,23 @@ body {
     flex-shrink: 0;
 }
 
+/* Version Badge */
+.version-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(43, 45, 49, 0.6);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(67, 181, 129, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.version-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
 /* Hero Section */
 .hero {
     padding: 4rem 0;
