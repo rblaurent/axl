@@ -73,7 +73,7 @@ body {
 /* Download Tooltip */
 .download-tooltip {
     position: fixed;
-    top: 80px;
+    top: 50px;
     right: 20px;
     max-width: 320px;
     background: var(--bg-dark);
@@ -92,7 +92,7 @@ body {
     content: '';
     position: absolute;
     top: -10px;
-    right: 30px;
+    right: 50px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -450,14 +450,14 @@ body {
     }
 
     .download-tooltip {
-        top: 60px;
+        top: 40px;
         right: 10px;
         left: 10px;
         max-width: none;
     }
 
     .download-tooltip::before {
-        right: 20px;
+        right: 30px;
     }
 
     .hero-title {
