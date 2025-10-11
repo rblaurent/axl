@@ -272,6 +272,33 @@ body {
     line-height: 1.6;
 }
 
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tech-logo {
+    flex-shrink: 0;
+}
+
+.tech-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.footer-libraries {
+    margin-top: 1rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
@@ -319,8 +346,9 @@ body {
         transform: none;
     }
 
-    .cta h2 {
-        font-size: 2rem;
+    .tech-stack {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
