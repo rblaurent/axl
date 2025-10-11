@@ -66,7 +66,6 @@
                         </svg>
                         Download for Windows
                     </a>
-                    <span class="version-badge" id="versionBadge">Loading...</span>
                 </div>
                 </div>
             </div>
@@ -102,27 +101,6 @@
     </footer>
 
     <script>
-        // Fetch latest version from version.json (hosted in this repo to avoid CORS)
-        async function fetchLatestVersion() {
-            const response = await fetch('version.json', {
-                cache: 'no-cache'
-            });
-
-            if (!response.ok) {
-                throw new Error(`Failed to fetch version.json: ${response.status} ${response.statusText}`);
-            }
-
-            const data = await response.json();
-
-            if (!data.version) {
-                throw new Error('Version not found in version.json');
-            }
-
-            document.getElementById('versionBadge').textContent = `v${data.version}`;
-        }
-
-        fetchLatestVersion();
-
         // Video background - play after delay
         const bgVideo = document.getElementById('bgVideo');
         setTimeout(() => {
