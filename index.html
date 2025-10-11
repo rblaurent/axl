@@ -102,26 +102,23 @@
     </footer>
 
     <script>
-        // Fetch latest version from update.xml (works with private repos)
+        // Fetch latest version from version.json (hosted in this repo to avoid CORS)
         async function fetchLatestVersion() {
-            const response = await fetch('https://github.com/rblaurent/redroaster/releases/latest/download/update.xml', {
+            const response = await fetch('version.json', {
                 cache: 'no-cache'
             });
 
             if (!response.ok) {
-                throw new Error(`Failed to fetch update.xml: ${response.status} ${response.statusText}`);
+                throw new Error(`Failed to fetch version.json: ${response.status} ${response.statusText}`);
             }
 
-            const text = await response.text();
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(text, 'text/xml');
-            const version = xmlDoc.querySelector('version')?.textContent;
+            const data = await response.json();
 
-            if (!version) {
-                throw new Error('Version not found in update.xml');
+            if (!data.version) {
+                throw new Error('Version not found in version.json');
             }
 
-            document.getElementById('versionBadge').textContent = `v${version}`;
+            document.getElementById('versionBadge').textContent = `v${data.version}`;
         }
 
         fetchLatestVersion();
