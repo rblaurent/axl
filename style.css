@@ -289,21 +289,25 @@ body {
 .tech-item {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.tech-logo {
-    height: 24px;
-    width: auto;
+.tech-icon {
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
     opacity: 0.9;
     transition: opacity 0.3s ease;
 }
 
-.tech-logo:hover {
+.tech-item:hover .tech-icon {
     opacity: 1;
 }
 
-.discord-logo {
-    height: 28px;
+.tech-label {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 400;
 }
 
 /* Responsive Design */
@@ -361,12 +365,13 @@ body {
         gap: 1.5rem;
     }
 
-    .tech-logo {
-        height: 20px;
+    .tech-icon {
+        height: 18px;
+        width: 18px;
     }
 
-    .discord-logo {
-        height: 24px;
+    .tech-label {
+        font-size: 0.8125rem;
     }
 }
 
