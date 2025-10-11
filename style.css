@@ -1,6 +1,6 @@
 /* Color scheme matching Axl app */
 :root {
-    --bg-dark: #1e1f22;
+    --bg-dark: #1e1f22EE;
     --bg-darker: #15161a;
     --bg-card: #2b2d31;
     --accent-green: #43b581;
@@ -64,7 +64,8 @@ body {
     border-radius: 24px;
     padding: 3rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
 }
 
 /* Download Tooltip */
