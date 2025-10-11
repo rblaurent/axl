@@ -4,7 +4,6 @@ Ever wanted an AI sidekick that watches your gameplay and roasts you in Discord 
 
 ![Version](https://img.shields.io/badge/version-0.1.6-blue)
 ![Platform](https://img.shields.io/badge/platform-Windows-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
 
 ## What Does It Do?
 
@@ -258,7 +257,7 @@ A: Yep! By default, Axl uses a female voice, but you can pick any ElevenLabs voi
 
 ## License
 
-MIT License - do whatever you want with it! Just don't blame me if Axl roasts you too hard.
+Axl is proprietary software. You're free to use it, but the source code and IP are protected. Don't copy, modify, or redistribute without permission!
 
 ## Credits
 
