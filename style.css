@@ -209,13 +209,20 @@ body {
     }
 }
 
+.subtle-asterisk {
+    font-size: 0.6em;
+    opacity: 0.4;
+    vertical-align: super;
+}
+
 .persona-note {
     font-family: 'Gochi Hand', cursive;
-    font-size: 1rem;
-    color: var(--accent-green);
-    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 2rem;
     line-height: 1.6;
-    opacity: 0.9;
+    opacity: 0.7;
+    text-align: center;
 }
 
 .hero-subtitle {
@@ -464,7 +471,8 @@ body {
     }
 
     .persona-note {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
+        margin-top: 1.5rem;
     }
 
     .hero-subtitle {
