@@ -259,7 +259,7 @@ body {
 
 /* Footer */
 .footer {
-    padding: 3rem 0;
+    padding: 2rem 0;
     background-color: var(--bg-darker);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -273,8 +273,12 @@ body {
 .footer-text {
     color: var(--text-muted);
     font-size: 0.875rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.footer-text:last-of-type {
+    margin-bottom: 0;
 }
 
 .tech-stack {
@@ -282,7 +286,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     flex-wrap: wrap;
 }
 
@@ -358,7 +362,7 @@ body {
     }
 
     .footer {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
     }
 
     .tech-stack {
