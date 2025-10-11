@@ -13,6 +13,14 @@
             <div class="hero-content">
                 <h1 class="hero-title">Meet Axl!</h1>
                 <p class="hero-subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, music, and good vibes to your gaming sessions.</p>
+
+                <div class="roast-bubble" id="roastBubble">
+                    <div class="roast-content">
+                        <p>"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble."</p>
+                        <span class="play-hint">🔊 Click to hear me</span>
+                    </div>
+                </div>
+
                 <div class="hero-actions">
                     <a href="https://github.com/rblaurent/redroaster/releases/latest/download/AxlSetup.exe" class="btn-download">
                         <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -27,5 +35,26 @@
             </div>
         </div>
     </section>
+
+    <script>
+        // Audio playback for roast bubble
+        const roastBubble = document.getElementById('roastBubble');
+        const audio = new Audio('roast-audio.mp3'); // Replace with your audio file
+
+        roastBubble.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                roastBubble.classList.add('playing');
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+                roastBubble.classList.remove('playing');
+            }
+        });
+
+        audio.addEventListener('ended', () => {
+            roastBubble.classList.remove('playing');
+        });
+    </script>
 </body>
 </html>

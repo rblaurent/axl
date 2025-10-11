@@ -84,8 +84,65 @@ body {
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--text-secondary);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     line-height: 1.8;
+}
+
+/* Roast Bubble */
+.roast-bubble {
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    background: var(--bg-card);
+    border: 2px solid var(--accent-green);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(67, 181, 129, 0.2);
+}
+
+.roast-bubble:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(67, 181, 129, 0.4);
+    border-color: var(--accent-green-hover);
+}
+
+.roast-bubble.playing {
+    animation: pulse 1s ease-in-out infinite;
+    border-color: #ec4899;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 30px rgba(236, 72, 153, 0.6);
+    }
+}
+
+.roast-content p {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.play-hint {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.roast-bubble:hover .play-hint {
+    color: var(--accent-green);
+}
+
+.roast-bubble.playing .play-hint::after {
+    content: ' (playing...)';
 }
 
 .hero-actions {
@@ -133,6 +190,14 @@ body {
 
     .hero-subtitle {
         font-size: 1.125rem;
+    }
+
+    .roast-bubble {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .roast-content p {
+        font-size: 1rem;
     }
 
     .cta h2 {
