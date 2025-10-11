@@ -46,9 +46,6 @@ body {
 
 .video-background.playing {
     filter: blur(8px);
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
 }
 
 .video-overlay {
