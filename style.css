@@ -253,23 +253,23 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* CTA Section */
-.cta {
-    padding: 6rem 0;
+/* Footer */
+.footer {
+    padding: 3rem 0;
+    background-color: var(--bg-darker);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    background: var(--gradient-purple);
 }
 
-.cta h2 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.cta p {
-    font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
