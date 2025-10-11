@@ -75,10 +75,21 @@ body {
     font-size: 5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-green) 100%);
+    background: linear-gradient(135deg, #ec4899 0%, var(--accent-green) 50%, #8b5cf6 100%);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .hero-subtitle {
@@ -104,6 +115,12 @@ body {
 .avatar-container {
     position: relative;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.avatar-container:hover {
+    transform: scale(1.05);
 }
 
 .avatar {
@@ -203,7 +220,7 @@ body {
 
 .roast-text:hover {
     color: var(--accent-green-hover);
-    transform: translateX(5px);
+    transform: translateX(-5px);
 }
 
 .roast-text.playing {

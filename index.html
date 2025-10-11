@@ -24,11 +24,11 @@
                         <div class="status-indicator"></div>
                     </div>
                     <div class="roast-message">
-                        <svg class="play-icon" id="playIcon" width="48" height="48" viewBox="0 0 24 24" fill="none">
-                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
-                            <path d="M9.5 8.97c0-.87.98-1.41 1.73-.95l6.24 3.82c.75.46.75 1.56 0 2.02l-6.24 3.82c-.75.46-1.73-.08-1.73-.95V8.97z" fill="currentColor"/>
-                        </svg>
                         <p class="roast-text" id="roastText">"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble."</p>
+                        <svg class="play-icon" id="playIcon" width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                            <path d="M10 8.5v7l5.5-3.5L10 8.5z" fill="#1e1f22"/>
+                        </svg>
                     </div>
                 </div>
 
@@ -71,6 +71,7 @@
 
         playIcon.addEventListener('click', toggleAudio);
         roastText.addEventListener('click', toggleAudio);
+        avatarContainer.addEventListener('click', toggleAudio);
 
         audio.addEventListener('ended', () => {
             playIcon.classList.remove('playing');
