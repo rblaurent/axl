@@ -211,6 +211,8 @@ body {
     color: var(--text-secondary);
     opacity: 0.7;
     vertical-align: super;
+    -webkit-text-fill-color: var(--text-secondary);
+    background: none;
 }
 
 .persona-note {
@@ -372,6 +374,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 /* Footer Content (now inside hero) */
