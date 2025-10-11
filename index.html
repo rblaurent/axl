@@ -14,10 +14,16 @@
                 <h1 class="hero-title">Meet Axl!</h1>
                 <p class="hero-subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, music, and good vibes to your gaming sessions.</p>
 
-                <div class="roast-bubble" id="roastBubble">
-                    <div class="roast-content">
-                        <p>"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble."</p>
-                        <span class="play-hint">🔊 Click to hear me</span>
+                <div class="roast-section">
+                    <div class="avatar-container" id="avatarContainer">
+                        <div class="avatar-ring"></div>
+                        <img src="resources/axl.png" alt="Axl" class="avatar">
+                    </div>
+                    <div class="roast-bubble" id="roastBubble">
+                        <div class="roast-content">
+                            <p>"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble."</p>
+                            <span class="play-hint">🔊 Click to hear me</span>
+                        </div>
                     </div>
                 </div>
 
@@ -39,21 +45,25 @@
     <script>
         // Audio playback for roast bubble
         const roastBubble = document.getElementById('roastBubble');
-        const audio = new Audio('roast-audio.mp3'); // Replace with your audio file
+        const avatarContainer = document.getElementById('avatarContainer');
+        const audio = new Audio('roast-audio.mp3');
 
         roastBubble.addEventListener('click', () => {
             if (audio.paused) {
                 audio.play();
                 roastBubble.classList.add('playing');
+                avatarContainer.classList.add('speaking');
             } else {
                 audio.pause();
                 audio.currentTime = 0;
                 roastBubble.classList.remove('playing');
+                avatarContainer.classList.remove('speaking');
             }
         });
 
         audio.addEventListener('ended', () => {
             roastBubble.classList.remove('playing');
+            avatarContainer.classList.remove('speaking');
         });
     </script>
 </body>
