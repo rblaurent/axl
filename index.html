@@ -39,7 +39,8 @@
         <div class="container">
             <div class="content-box">
                 <div class="hero-content">
-                <h1 class="hero-title">Meet Axl!</h1>
+                <h1 class="hero-title">Meet Axl!*</h1>
+                <p class="persona-note">* Can't stand Axl? No worries! There are other personae available, and you can even create your own!</p>
                 <p class="hero-subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, music, and good vibes to your gaming sessions.</p>
 
                 <div class="roast-section">
@@ -111,9 +112,17 @@
         const avatarContainer = document.getElementById('avatarContainer');
         const audio = new Audio('resources/axl.mp3?v=2');
 
+        // Preload the audio file for instant playback
+        audio.preload = 'auto';
+        audio.load();
+
         function toggleAudio() {
             if (audio.paused) {
-                audio.play();
+                // Reset to start and ensure we play from the beginning
+                audio.currentTime = 0;
+                audio.play().catch(err => {
+                    console.error('Audio playback failed:', err);
+                });
                 playIcon.classList.add('playing');
                 roastText.classList.add('playing');
                 avatarContainer.classList.add('speaking');
