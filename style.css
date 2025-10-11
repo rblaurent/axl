@@ -253,23 +253,19 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Footer */
-.footer {
-    padding: 3rem 0;
-    background-color: var(--bg-darker);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+/* Tech Info */
+.tech-info {
+    margin-top: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.footer-text {
+.tech-intro {
     color: var(--text-muted);
     font-size: 0.875rem;
     line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .tech-stack {
@@ -278,25 +274,34 @@ body {
     align-items: center;
     gap: 2rem;
     margin: 1.5rem 0;
+    flex-wrap: wrap;
 }
 
 .tech-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .tech-logo {
-    flex-shrink: 0;
+    height: 24px;
+    width: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.tech-name {
+.tech-logo:hover {
+    opacity: 1;
+}
+
+.discord-logo {
+    height: 28px;
+}
+
+.tech-outro {
+    color: var(--text-muted);
     font-size: 0.875rem;
-    font-weight: 600;
-}
-
-.footer-libraries {
-    margin-top: 1rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
 }
 
 /* Responsive Design */
@@ -347,8 +352,15 @@ body {
     }
 
     .tech-stack {
-        flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+    }
+
+    .tech-logo {
+        height: 20px;
+    }
+
+    .discord-logo {
+        height: 24px;
     }
 }
 
