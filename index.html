@@ -11,9 +11,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Video Background -->
+    <video class="video-background" id="bgVideo" muted playsinline>
+        <source src="resources/axl.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="content-box">
+                <div class="hero-content">
                 <h1 class="hero-title">Meet Axl!</h1>
                 <p class="hero-subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, music, and good vibes to your gaming sessions.</p>
 
@@ -43,13 +50,15 @@
                     </a>
                     <span class="version-badge">v0.1.0</span>
                 </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="content-box">
+                <div class="footer-content">
                 <p class="footer-text">Made with love ❤️ and coffee ☕</p>
                 <p class="footer-text">Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.</p>
                 <div class="tech-stack">
@@ -69,11 +78,19 @@
                     </div>
                 </div>
                 <p class="footer-text">And so many more cool libraries that let us do cool stuff!</p>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
+        // Video background - play after delay
+        const bgVideo = document.getElementById('bgVideo');
+        setTimeout(() => {
+            bgVideo.play();
+            bgVideo.classList.add('playing');
+        }, 3000); // Play after 3 seconds
+
         // Audio playback for roast message
         const playIcon = document.getElementById('playIcon');
         const roastText = document.getElementById('roastText');
