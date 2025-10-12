@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Axl</title>
+    <meta name="description" content="Terms of Service for using Axl, your AI gaming companion.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCZQG816WQ');
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="resources/android-chrome-512x512.png">
+    <link rel="manifest" href="resources/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Sansation:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Terms page specific styles */
+        .terms-page {
+            padding: 4rem 0;
+            min-height: 100vh;
+        }
+
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .terms-content {
+            background: var(--bg-dark);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .terms-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #5dd39e 0%, var(--accent-green) 50%, var(--accent-green-hover) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .terms-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .terms-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-icon {
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .section-text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .section-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-green-hover);
+            transform: translateX(-5px);
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(181, 186, 193, 0.1);
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .bullet-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .bullet-icon {
+            color: var(--text-muted);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+
+            .terms-page {
+                padding: 2rem 0;
+            }
+
+            .terms-container {
+                padding: 0 1rem;
+            }
+
+            .terms-title {
+                font-size: 2rem;
+            }
+
+            .terms-intro {
+                font-size: 1rem;
+            }
+
+            .terms-section {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="terms-page">
+        <div class="terms-container">
+            <div class="terms-content">
+                <a href="index.html" class="back-link">
+                    <span>←</span>
+                    <span>Back to Home</span>
+                </a>
+
+                <!-- Header -->
+                <div class="terms-header">
+                    <h1 class="terms-title">Terms of Service</h1>
+                    <div class="terms-intro">
+                        <p>These are the terms for using Axl. I'm keeping this straightforward and honest - no legal jargon overload. By downloading and using Axl, you're agreeing to these terms.</p>
+                    </div>
+                </div>
+
+                <!-- What Axl Is -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">📱</span>
+                        <h2 class="section-title">What Axl Is</h2>
+                    </div>
+                    <p class="section-text">
+                        Axl is a <span class="highlight">free</span> Windows desktop application that provides AI-powered gaming commentary through Discord voice channels. It's a hobby project built by a solo developer.
+                    </p>
+                </div>
+
+                <!-- Your Responsibilities -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">✅</span>
+                        <h2 class="section-title">Your Responsibilities</h2>
+                    </div>
+                    <p class="section-text">
+                        When you use Axl, you're responsible for:
+                    </p>
+                    <ul class="bullet-list">
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span><span class="highlight">Providing your own API keys</span> for Claude (Anthropic) and ElevenLabs services</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span><span class="highlight">Paying for your own API usage costs</span> - Axl makes API calls on your behalf using your keys, and you're billed directly by those services</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span><span class="highlight">Complying with Discord's Terms of Service</span> - Axl connects to Discord, so you need to follow their rules</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span><span class="highlight">Following the terms of service</span> for Anthropic, ElevenLabs, and any other services Axl integrates with</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span><span class="highlight">Using Axl legally and responsibly</span> - don't use it to harass people, spam, or do anything illegal</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- As-Is Software -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">⚠️</span>
+                        <h2 class="section-title">No Warranties ("As-Is")</h2>
+                    </div>
+                    <p class="section-text">
+                        Axl is provided <span class="highlight">"as-is"</span> without any warranties. This means:
+                    </p>
+                    <ul class="bullet-list">
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>I can't guarantee it'll work perfectly all the time</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>Bugs happen - I'll try to fix them, but no promises on timeline</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>Updates might break things temporarily</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>I'm not responsible if API services go down or change their pricing</span>
+                        </li>
+                    </ul>
+                    <p class="section-text">
+                        I'm doing my best to make Axl awesome, but it's a hobby project and things can go wrong.
+                    </p>
+                </div>
+
+                <!-- Limitation of Liability -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">🛡️</span>
+                        <h2 class="section-title">Limitation of Liability</h2>
+                    </div>
+                    <p class="section-text">
+                        I'm not liable for:
+                    </p>
+                    <ul class="bullet-list">
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>API costs you rack up using Axl - you control the API keys and usage</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>Any issues with Discord, Anthropic, ElevenLabs, or other third-party services</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>Data loss or corruption</span>
+                        </li>
+                        <li class="bullet-item">
+                            <span class="bullet-icon">•</span>
+                            <span>Any damages (direct or indirect) from using Axl</span>
+                        </li>
+                    </ul>
+                    <p class="section-text">
+                        Use Axl at your own risk. If something goes wrong, I'll try to help, but I can't be held legally or financially responsible.
+                    </p>
+                </div>
+
+                <!-- Updates and Changes -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">🔄</span>
+                        <h2 class="section-title">Updates and Changes</h2>
+                    </div>
+                    <p class="section-text">
+                        I can update, modify, or discontinue Axl at any time without notice. I can also update these terms whenever needed.
+                    </p>
+                    <p class="section-text">
+                        If I make significant changes to the terms, I'll update the "Last updated" date at the bottom of this page.
+                    </p>
+                </div>
+
+                <!-- Open Source -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">💻</span>
+                        <h2 class="section-title">Open Source</h2>
+                    </div>
+                    <p class="section-text">
+                        Axl is open source and available on <span class="highlight">GitHub (github.com/rblaurent/axl)</span>. You can view the code, report issues, or contribute if you want.
+                    </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="terms-section">
+                    <div class="section-header">
+                        <span class="section-icon">💬</span>
+                        <h2 class="section-title">Questions?</h2>
+                    </div>
+                    <p class="section-text">
+                        If you have questions about these terms, open an issue on GitHub or reach out to me directly.
+                    </p>
+                </div>
+
+                <div class="footer-note">
+                    Last updated: October 2025
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
