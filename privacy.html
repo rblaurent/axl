@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Transparency - Axl</title>
+    <meta name="description" content="Learn how Axl handles your data, what we collect, and how you can control your privacy.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCZQG816WQ');
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="resources/android-chrome-512x512.png">
+    <link rel="manifest" href="resources/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Sansation:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Privacy page specific styles */
+        .privacy-page {
+            padding: 4rem 0;
+            min-height: 100vh;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .privacy-content {
+            background: var(--bg-dark);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .privacy-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #5dd39e 0%, var(--accent-green) 50%, var(--accent-green-hover) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .privacy-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .privacy-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-icon {
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .section-text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-box:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box-text {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .code-text {
+            font-family: 'Courier New', monospace;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .check-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-icon {
+            color: var(--accent-green);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .bullet-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .bullet-icon {
+            color: var(--text-muted);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .emphasis-text {
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .small-text {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 0.75rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-green-hover);
+            transform: translateX(-5px);
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(181, 186, 193, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+
+            .privacy-page {
+                padding: 2rem 0;
+            }
+
+            .privacy-container {
+                padding: 0 1rem;
+            }
+
+            .privacy-title {
+                font-size: 2rem;
+            }
+
+            .privacy-intro {
+                font-size: 1rem;
+            }
+
+            .privacy-section {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="privacy-page">
+        <div class="privacy-container">
+            <div class="privacy-content">
+                <a href="index.html" class="back-link">
+                    <span>←</span>
+                    <span>Back to Home</span>
+                </a>
+
+                <!-- Header -->
+                <div class="privacy-header">
+                    <h1 class="privacy-title">Privacy & Transparency</h1>
+                    <div class="privacy-intro">
+                        <p>Let's talk about AI and your data. With all these AI apps out there, it's often unclear where your data goes, who sees it, and what happens to it. I get it - it's frustrating and honestly a bit scary.</p>
+                        <p style="margin-top: 1rem;">Here's what I'm trying to do: tell you what Axl does with your data, where it goes, and how you can control it. No vague terms, no corporate speak, just straight talk.</p>
+                    </div>
+                </div>
+
+                <!-- TL;DR Section -->
+                <div class="privacy-section">
+                    <div class="section-header">
+                        <span class="section-icon">🛡️</span>
+                        <h2 class="section-title">TL;DR</h2>
+                    </div>
+                    <p class="section-text">
+                        Your screenshots and audio are stored <span class="highlight">locally</span> on your PC in
+                        <span class="code-text">%LocalAppData%\Roaster</span>. I send data to AI services (Claude, ElevenLabs)
+                        and Discord only when needed to make Axl work. I track anonymous usage stats to improve the app. I don't sell your data.
+                    </p>
+                    <div class="info-box">
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span>Screenshots and audio stay on your PC</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span>I don't access your screenshots, audio, or Discord messages</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span>I don't sell your data</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span>Voice recognition happens locally (Vosk)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Where Your Data Goes -->
+                <div class="privacy-section">
+                    <div class="section-header">
+                        <span class="section-icon">☁️</span>
+                        <h2 class="section-title">Where Your Data Goes</h2>
+                    </div>
+                    <p class="section-text">
+                        To make Axl work, I send your data to these AI services. Here's what gets sent to each one:
+                    </p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">💡 Anthropic (Claude AI)</div>
+                        <p class="info-box-text">
+                            <span class="highlight">What I send:</span> Your gameplay screenshots, conversation history (what Axl said before), and the companion's personality prompt.
+                        </p>
+                        <p class="info-box-text">
+                            <span class="highlight">Why:</span> So Claude can analyze what's happening in your game and generate relevant commentary.
+                        </p>
+                        <p class="info-box-text">
+                            <span class="highlight">What I DON'T send:</span> Your Discord messages, voice chat audio, or any personal info.
+                        </p>
+                        <p class="small-text">Check their privacy policy at anthropic.com/privacy</p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">🔊 ElevenLabs (Text-to-Speech)</div>
+                        <p class="info-box-text">
+                            <span class="highlight">What I send:</span> Only the text of Axl's commentary (what Claude generated).
+                        </p>
+                        <p class="info-box-text">
+                            <span class="highlight">Why:</span> To convert the text into Axl's voice.
+                        </p>
+                        <p class="info-box-text">
+                            <span class="highlight">What I DON'T send:</span> Your screenshots, game info, or anything else. Just the commentary text.
+                        </p>
+                        <p class="small-text">Check their privacy policy at elevenlabs.io/privacy</p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">💬 Discord (Voice Playback)</div>
+                        <p class="info-box-text">
+                            <span class="highlight">What goes through:</span> Only the audio file of Axl's voice.
+                        </p>
+                        <p class="info-box-text">
+                            <span class="highlight">Why:</span> To play it in your Discord voice channel.
+                        </p>
+                        <p class="info-box-text">
+                            <span class="highlight">Note:</span> Axl uses your Discord server - she doesn't read messages or access any Discord data.
+                        </p>
+                        <p class="small-text">Check their privacy policy at discord.com/privacy</p>
+                    </div>
+                </div>
+
+                <!-- What I Actually Collect -->
+                <div class="privacy-section">
+                    <div class="section-header">
+                        <span class="section-icon">📊</span>
+                        <h2 class="section-title">What I Actually Collect</h2>
+                    </div>
+                    <p class="section-text">
+                        I use Google Analytics to understand how people use Axl. This helps me fix bugs and know which features to build next.
+                    </p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Essential (always collected):</div>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>App starts</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>API call performance (response times)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Optional (you can disable this):</div>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Feature usage (screenshots captured, voice commands used, etc.)</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Which settings you change (but not the actual values!)</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Crashes and errors (stack traces are hashed for privacy)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">What I DON'T track:</div>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Your screenshots or what games you play</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Your API keys or any credentials</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Your Discord server info or messages</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>What Axl says (the actual commentary)</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span>Your personally identifiable information</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="emphasis-text">
+                        Each installation gets a random ID so I can count users without knowing who you are. It's like a "User #12345" situation.
+                    </p>
+                </div>
+
+                <!-- Why I Need This -->
+                <div class="privacy-section">
+                    <div class="section-header">
+                        <span class="section-icon">❓</span>
+                        <h2 class="section-title">Why I Need This</h2>
+                    </div>
+                    <p class="section-text">
+                        As a solo dev, analytics help me make Axl better without bothering you with surveys. I can see:
+                    </p>
+                    <div class="info-box">
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span><span class="highlight">Is anyone actually using this?</span> (nothing's sadder than building features nobody uses)</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span><span class="highlight">Which features are popular?</span> (so I can make them even better)</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span><span class="highlight">What's breaking?</span> (crashes and errors I need to fix)</span>
+                            </li>
+                            <li class="bullet-item">
+                                <span class="bullet-icon">•</span>
+                                <span><span class="highlight">How's performance?</span> (if API calls are taking forever, I need to know)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Your Rights -->
+                <div class="privacy-section">
+                    <div class="section-header">
+                        <span class="section-icon">👤</span>
+                        <h2 class="section-title">Your Rights</h2>
+                    </div>
+                    <p class="section-text">
+                        You're in control. Here's what you can do:
+                    </p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Delete your local data:</div>
+                        <p class="info-box-text">
+                            Just uninstall Axl and delete the <span class="code-text">%LocalAppData%\Roaster</span> folder.
+                            That's it. All your local settings and data are gone.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Your Analytics ID:</div>
+                        <p class="info-box-text">
+                            Each installation gets a unique ID for anonymous analytics. You can find yours in the app settings.
+                        </p>
+                        <p class="small-text">
+                            Note: Google Analytics doesn't offer a self-service data deletion API. If you want your analytics data deleted,
+                            email me with your ID and I'll manually remove it from GA4.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Questions?</div>
+                        <p class="info-box-text">
+                            Open an issue on GitHub (<span class="highlight">github.com/rblaurent/axl</span>) or DM me.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footer-note">
+                    Last updated: October 2025
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
