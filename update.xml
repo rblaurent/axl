@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <item>
-  <version>0.1.16</version>
-  <url>https://github.com/rblaurent/axl/releases/download/v0.1.16/Axl-v0.1.16.zip</url>
-  <changelog>https://github.com/rblaurent/axl/releases/tag/v0.1.16</changelog>
+  <version>0.1.17</version>
+  <url>https://github.com/rblaurent/axl/releases/download/v0.1.17/Axl-v0.1.17.zip</url>
+  <changelog>https://github.com/rblaurent/axl/releases/tag/v0.1.17</changelog>
   <mandatory>true</mandatory>
 </item>
