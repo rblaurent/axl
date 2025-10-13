@@ -141,6 +141,7 @@ body {
 .btn-download {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
     background-color: var(--accent-green);
     color: white;
@@ -151,6 +152,8 @@ body {
     font-size: 1.125rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(67, 181, 129, 0.3);
+    width: 100%;
+    max-width: 300px;
 }
 
 .btn-download:hover {
@@ -166,6 +169,7 @@ body {
 .btn-secondary {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.75rem;
     background-color: var(--bg-card);
     color: var(--text-secondary);
@@ -176,6 +180,8 @@ body {
     font-size: 1.125rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
 }
 
 .btn-secondary:hover {
