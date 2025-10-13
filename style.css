@@ -163,6 +163,32 @@ body {
     flex-shrink: 0;
 }
 
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary:hover {
+    background-color: #35383d;
+    color: var(--text-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+    flex-shrink: 0;
+}
+
 /* Version Badge */
 .version-badge {
     display: inline-flex;
