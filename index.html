@@ -143,6 +143,7 @@
             // Check localStorage first
             const savedLang = localStorage.getItem('preferredLanguage');
             if (savedLang && supportedLanguages.includes(savedLang)) {
+                console.log(`[i18n] Using saved language: ${savedLang}`);
                 return savedLang;
             }
 
@@ -150,8 +151,13 @@
             const browserLang = navigator.language || navigator.languages?.[0] || 'en';
             const langCode = browserLang.split('-')[0].toLowerCase();
 
+            console.log(`[i18n] Browser language: ${browserLang}, detected code: ${langCode}`);
+            console.log(`[i18n] All browser languages:`, navigator.languages);
+
             // Return language if supported, otherwise default to English
-            return supportedLanguages.includes(langCode) ? langCode : 'en';
+            const finalLang = supportedLanguages.includes(langCode) ? langCode : 'en';
+            console.log(`[i18n] Final language selection: ${finalLang}`);
+            return finalLang;
         }
 
         // Load translations from JSON
