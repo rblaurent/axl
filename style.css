@@ -47,14 +47,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(
-        to right,
-        transparent 0%,
-        transparent 40%,
-        rgba(15, 16, 17, 0.3) 60%,
-        rgba(15, 16, 17, 0.7) 80%,
-        var(--bg-beige) 100%
-    );
     pointer-events: none;
 }
 
