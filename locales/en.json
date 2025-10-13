@@ -10,6 +10,7 @@
     "title": "Meet Axl!",
     "subtitle": "Your AI-powered gaming companion for Discord. Bringing the commentary, laughs, and good vibes to your gaming sessions.",
     "roast": "\"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble.\"",
+    "roastAudio": "resources/audio/en.mp3",
     "aboutBtn": "Who is Axl?",
     "downloadBtn": "Download for Windows",
     "versionLoading": "Loading version...",

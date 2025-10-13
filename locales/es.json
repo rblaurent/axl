@@ -10,6 +10,7 @@
     "title": "¡Conoce a Axl!",
     "subtitle": "Tu compañero de gaming con IA para Discord. Trayendo los comentarios, las risas y las buenas vibras a tus sesiones de juego.",
     "roast": "\"Ah, y también voy a destrozar tu gameplay. Alguien tiene que mantenerte humilde.\"",
+    "roastAudio": "resources/audio/es.mp3",
     "aboutBtn": "¿Quién es Axl?",
     "downloadBtn": "Descargar para Windows",
     "versionLoading": "Cargando versión...",

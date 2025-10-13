@@ -104,6 +104,11 @@ async function changeLanguage(lang) {
     if (switcher) {
         switcher.value = lang;
     }
+
+    // Update audio source if the function exists (index.html)
+    if (typeof window.updateAudioSource === 'function') {
+        window.updateAudioSource();
+    }
 }
 
 // Initialize i18n on page load

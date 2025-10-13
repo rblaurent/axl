@@ -10,6 +10,7 @@
     "title": "Voici Axl !",
     "subtitle": "Votre compagnon gaming alimenté par l'IA pour Discord. Apportant les commentaires, les rires et les bonnes vibes à vos sessions de jeu.",
     "roast": "\"Oh, et je vais aussi totalement tacler ton gameplay. Il faut bien que quelqu'un te garde humble.\"",
+    "roastAudio": "resources/audio/fr.mp3",
     "aboutBtn": "Qui est Axl ?",
     "downloadBtn": "Télécharger pour Windows",
     "versionLoading": "Chargement de la version...",

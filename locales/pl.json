@@ -10,6 +10,7 @@
     "title": "Poznaj Axl!",
     "subtitle": "Twój towarzysz gamingowy napędzany AI dla Discord. Dodaje komentarz, śmiech i dobre wibracje do Twoich sesji gamingowych.",
     "roast": "\"A, i totalnie będę dołować Twoją rozgrywkę. Ktoś musi Cię trzymać przy ziemi.\"",
+    "roastAudio": "resources/audio/pl.mp3",
     "aboutBtn": "Kim jest Axl?",
     "downloadBtn": "Pobierz dla Windows",
     "versionLoading": "Ładowanie wersji...",

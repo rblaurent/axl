@@ -10,6 +10,7 @@
     "title": "Triff Axl!",
     "subtitle": "Dein KI-gestützter Gaming-Begleiter für Discord. Bringt Kommentare, Lacher und gute Vibes in deine Gaming-Sessions.",
     "roast": "\"Ach ja, und ich werde dein Gameplay auch ordentlich durch den Kakao ziehen. Irgendwer muss dich ja auf dem Boden halten.\"",
+    "roastAudio": "resources/audio/de.mp3",
     "aboutBtn": "Wer ist Axl?",
     "downloadBtn": "Für Windows herunterladen",
     "versionLoading": "Version wird geladen...",

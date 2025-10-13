@@ -183,11 +183,36 @@
         const playIcon = document.getElementById('playIcon');
         const roastText = document.getElementById('roastText');
         const avatarContainer = document.getElementById('avatarContainer');
-        const audio = new Audio('resources/axl.mp3?v=2');
+
+        // Get audio path from translation data
+        let audioPath = getNestedTranslation('hero.roastAudio') || 'resources/axl.mp3?v=2';
+        let audio = new Audio(audioPath);
 
         // Preload the audio file for instant playback
         audio.preload = 'auto';
         audio.load();
+
+        // Function to update audio source (called when language changes)
+        window.updateAudioSource = function() {
+            const wasPlaying = !audio.paused;
+            if (wasPlaying) {
+                audio.pause();
+                playIcon.classList.remove('playing');
+                roastText.classList.remove('playing');
+                avatarContainer.classList.remove('speaking');
+            }
+
+            audioPath = getNestedTranslation('hero.roastAudio') || 'resources/axl.mp3?v=2';
+            audio = new Audio(audioPath);
+            audio.preload = 'auto';
+            audio.load();
+
+            audio.addEventListener('ended', () => {
+                playIcon.classList.remove('playing');
+                roastText.classList.remove('playing');
+                avatarContainer.classList.remove('speaking');
+            });
+        };
 
         function toggleAudio() {
             if (audio.paused) {
