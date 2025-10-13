@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Axl - Votre Compagnon de Jeu IA",
+    "description": "Axl apporte des commentaires alimentés par l'IA à vos sessions de jeu sur Discord. Téléchargez maintenant pour Windows."
+  },
+  "hero": {
+    "title": "Rencontrez Axl !",
+    "subtitle": "Votre compagnon de jeu IA pour Discord. Apportant commentaires, rires et bonne ambiance à vos sessions de jeu.",
+    "roast": "Oh, et je vais totalement critiquer votre gameplay aussi. Il faut bien que quelqu'un vous garde humble.",
+    "aboutBtn": "Qui est Axl ?",
+    "downloadBtn": "Télécharger pour Windows",
+    "versionLoading": "Chargement de la version...",
+    "versionLatest": "Dernière version",
+    "versionText": "Version"
+  },
+  "tooltip": {
+    "title": "Hé ! Petite info :",
+    "message": "Comme je suis un développeur indépendant, Microsoft SmartScreen ne me reconnaît pas encore. Cliquez simplement sur <strong>\"Plus d'infos\"</strong> puis sur <strong>\"Exécuter quand même\"</strong> pour passer l'avertissement.",
+    "footer": "Plus il y a de téléchargements, plus Microsoft nous fera confiance. Désolé pour le désagrément !"
+  },
+  "persona": {
+    "note": "Vous ne supportez pas Axl ? Pas de souci ! Il y a d'autres compagnons disponibles, et vous pouvez même créer le vôtre !"
+  },
+  "footer": {
+    "madeWith": "Fait avec amour",
+    "madeWithAnd": "et café",
+    "disclaimer": "Axl utilise l'IA pour discuter et traîner dans vos canaux vocaux Discord, ainsi que des photos de profil générées par IA.",
+    "privacy": "Confidentialité et Transparence",
+    "terms": "Conditions d'Utilisation",
+    "about": "Qui est Axl ?",
+    "language": "Langue"
+  }
+}

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axl - Your AI Gaming Companion</title>
-    <meta name="description" content="Axl brings AI-powered commentary to your gaming sessions on Discord. Download now for Windows.">
+    <title data-i18n="meta.title">Axl - Your AI Gaming Companion</title>
+    <meta name="description" content="Axl brings AI-powered commentary to your gaming sessions on Discord. Download now for Windows." data-i18n-meta="meta.description">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
@@ -40,17 +40,17 @@
     <!-- Download Tooltip -->
     <div class="download-tooltip" id="downloadTooltip">
         <div class="tooltip-close" id="tooltipClose">×</div>
-        <p><strong>Hey! Quick heads up:</strong></p>
-        <p>Since I'm an indie dev, Microsoft SmartScreen doesn't recognize me yet. Just click <strong>"More Info"</strong> and then <strong>"Run anyway"</strong> to get past the warning.</p>
-        <p>The more people download, the more Microsoft will trust us. Sorry for the hassle! 😅</p>
+        <p><strong data-i18n="tooltip.title">Hey! Quick heads up:</strong></p>
+        <p data-i18n-html="tooltip.message">Since I'm an indie dev, Microsoft SmartScreen doesn't recognize me yet. Just click <strong>"More Info"</strong> and then <strong>"Run anyway"</strong> to get past the warning.</p>
+        <p data-i18n="tooltip.footer">The more people download, the more Microsoft will trust us. Sorry for the hassle! 😅</p>
     </div>
 
     <section class="hero">
         <div class="container">
             <div class="content-box">
                 <div class="hero-content">
-                <h1 class="hero-title">Meet Axl!</h1>
-                <p class="hero-subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, laughs, and good vibes to your gaming sessions.</p>
+                <h1 class="hero-title" data-i18n="hero.title">Meet Axl!</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Your AI-powered gaming companion for Discord. Bringing the commentary, laughs, and good vibes to your gaming sessions.</p>
 
                 <div class="roast-section">
                     <div class="avatar-container" id="avatarContainer">
@@ -59,7 +59,7 @@
                         <div class="status-indicator"></div>
                     </div>
                     <div class="roast-message">
-                        <p class="roast-text" id="roastText">"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble."</p>
+                        <p class="roast-text" id="roastText" data-i18n="hero.roast">"Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble."</p>
                         <svg class="play-icon" id="playIcon" width="48" height="48" viewBox="0 0 24 24" fill="none">
                             <circle cx="12" cy="12" r="10" fill="currentColor"/>
                             <path d="M10 8.5v7l5.5-3.5L10 8.5z" fill="#1e1f22"/>
@@ -73,7 +73,7 @@
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        Who is Axl?
+                        <span data-i18n="hero.aboutBtn">Who is Axl?</span>
                     </a>
                     <a href="https://github.com/rblaurent/axl/releases/latest/download/AxlSetup.exe" class="btn-download" id="downloadBtn">
                         <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -81,10 +81,10 @@
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        Download for Windows
+                        <span data-i18n="hero.downloadBtn">Download for Windows</span>
                     </a>
                     <div class="version-badge" id="versionBadge">
-                        <span class="version-text">Loading version...</span>
+                        <span class="version-text" data-i18n="hero.versionLoading">Loading version...</span>
                     </div>
                 </div>
 
@@ -94,18 +94,35 @@
                         <img src="resources/sage.png" alt="Sage" class="companion-avatar companion-avatar-2">
                         <img src="resources/hype.png" alt="Hype" class="companion-avatar companion-avatar-3">
                     </span>
-                    Can't stand Axl? No worries! There are other companions available, and you can even create your own!
+                    <span data-i18n="persona.note">Can't stand Axl? No worries! There are other companions available, and you can even create your own!</span>
                 </p>
 
                 <div class="footer-content">
-                    <p class="footer-text">Made with love <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> and coffee <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></p>
-                    <p class="footer-text">Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.</p>
+                    <p class="footer-text"><span data-i18n="footer.madeWith">Made with love</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span data-i18n="footer.madeWithAnd">and coffee</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></p>
+                    <p class="footer-text" data-i18n="footer.disclaimer">Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.</p>
                     <p class="footer-text">
-                        <a href="privacy.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Privacy & Transparency</a>
+                        <a href="privacy.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.privacy">Privacy & Transparency</a>
                         <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
-                        <a href="terms.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Terms of Service</a>
+                        <a href="terms.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.terms">Terms of Service</a>
                         <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
-                        <a href="about.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Who is Axl?</a>
+                        <a href="about.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.about">Who is Axl?</a>
+                        <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                        <span class="language-switcher">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 4px;">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <select id="languageSwitcher" style="background: transparent; border: none; color: var(--accent-green); font-weight: 500; cursor: pointer; font-family: inherit; font-size: inherit;">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="it">Italiano</option>
+                                <option value="pt">Português</option>
+                                <option value="pl">Polski</option>
+                            </select>
+                        </span>
                     </p>
                 </div>
                 </div>
@@ -114,6 +131,126 @@
     </section>
 
     <script>
+        // ===== i18n System =====
+        let currentLanguage = 'en';
+        let translations = {};
+
+        // Supported languages
+        const supportedLanguages = ['en', 'es', 'fr', 'de', 'it', 'pt', 'pl'];
+
+        // Detect user's preferred language
+        function detectLanguage() {
+            // Check localStorage first
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && supportedLanguages.includes(savedLang)) {
+                return savedLang;
+            }
+
+            // Detect from browser
+            const browserLang = navigator.language || navigator.languages?.[0] || 'en';
+            const langCode = browserLang.split('-')[0].toLowerCase();
+
+            // Return language if supported, otherwise default to English
+            return supportedLanguages.includes(langCode) ? langCode : 'en';
+        }
+
+        // Load translations from JSON
+        async function loadTranslations(lang) {
+            try {
+                const response = await fetch(`locales/${lang}.json`);
+                if (!response.ok) throw new Error('Translation file not found');
+                translations = await response.json();
+                currentLanguage = lang;
+                applyTranslations();
+                updateHtmlLang();
+                return true;
+            } catch (error) {
+                console.error(`Failed to load ${lang} translations:`, error);
+                // Fallback to English if not already trying English
+                if (lang !== 'en') {
+                    return loadTranslations('en');
+                }
+                return false;
+            }
+        }
+
+        // Apply translations to the page
+        function applyTranslations() {
+            // Update text content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const translation = getNestedTranslation(key);
+                if (translation) {
+                    element.textContent = translation;
+                }
+            });
+
+            // Update HTML content (for elements with HTML tags inside)
+            document.querySelectorAll('[data-i18n-html]').forEach(element => {
+                const key = element.getAttribute('data-i18n-html');
+                const translation = getNestedTranslation(key);
+                if (translation) {
+                    element.innerHTML = translation;
+                }
+            });
+
+            // Update meta description
+            const metaDesc = document.querySelector('[data-i18n-meta]');
+            if (metaDesc && translations.meta?.description) {
+                metaDesc.setAttribute('content', translations.meta.description);
+            }
+
+            // Update document title
+            if (translations.meta?.title) {
+                document.title = translations.meta.title;
+            }
+        }
+
+        // Get nested translation by key (e.g., "hero.title")
+        function getNestedTranslation(key) {
+            return key.split('.').reduce((obj, k) => obj?.[k], translations);
+        }
+
+        // Update HTML lang attribute
+        function updateHtmlLang() {
+            document.documentElement.setAttribute('lang', currentLanguage);
+        }
+
+        // Change language
+        async function changeLanguage(lang) {
+            if (!supportedLanguages.includes(lang)) {
+                console.warn(`Language ${lang} not supported, falling back to English`);
+                lang = 'en';
+            }
+
+            localStorage.setItem('preferredLanguage', lang);
+            await loadTranslations(lang);
+
+            // Update the language switcher
+            const switcher = document.getElementById('languageSwitcher');
+            if (switcher) {
+                switcher.value = lang;
+            }
+        }
+
+        // Initialize i18n on page load
+        async function initI18n() {
+            const preferredLang = detectLanguage();
+            await loadTranslations(preferredLang);
+
+            // Set up language switcher
+            const switcher = document.getElementById('languageSwitcher');
+            if (switcher) {
+                switcher.value = currentLanguage;
+                switcher.addEventListener('change', (e) => {
+                    changeLanguage(e.target.value);
+                });
+            }
+        }
+
+        // Initialize i18n as early as possible
+        initI18n();
+
         // Fetch and display version from update.xml
         async function fetchVersion() {
             try {
@@ -124,13 +261,16 @@
                 const version = xmlDoc.querySelector('version')?.textContent;
 
                 if (version) {
-                    document.getElementById('versionBadge').innerHTML = `<span class="version-text">Version ${version}</span>`;
+                    const versionText = getNestedTranslation('hero.versionText') || 'Version';
+                    document.getElementById('versionBadge').innerHTML = `<span class="version-text">${versionText} ${version}</span>`;
                 } else {
-                    document.getElementById('versionBadge').innerHTML = '<span class="version-text">Latest version</span>';
+                    const latestText = getNestedTranslation('hero.versionLatest') || 'Latest version';
+                    document.getElementById('versionBadge').innerHTML = `<span class="version-text">${latestText}</span>`;
                 }
             } catch (error) {
                 console.error('Failed to fetch version:', error);
-                document.getElementById('versionBadge').innerHTML = '<span class="version-text">Latest version</span>';
+                const latestText = getNestedTranslation('hero.versionLatest') || 'Latest version';
+                document.getElementById('versionBadge').innerHTML = `<span class="version-text">${latestText}</span>`;
             }
         }
 

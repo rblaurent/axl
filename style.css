@@ -610,3 +610,33 @@ html {
     background-color: var(--accent-green);
     color: white;
 }
+
+/* Language Switcher */
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+#languageSwitcher {
+    background: transparent;
+    border: none;
+    color: var(--accent-green);
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+#languageSwitcher:hover {
+    color: var(--accent-green-hover);
+}
+
+#languageSwitcher option {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    padding: 0.5rem;
+}

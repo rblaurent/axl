@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Axl - Your AI Gaming Companion",
+    "description": "Axl brings AI-powered commentary to your gaming sessions on Discord. Download now for Windows."
+  },
+  "hero": {
+    "title": "Meet Axl!",
+    "subtitle": "Your AI-powered gaming companion for Discord. Bringing the commentary, laughs, and good vibes to your gaming sessions.",
+    "roast": "Oh, and I'll totally roast your gameplay too. Someone's gotta keep you humble.",
+    "aboutBtn": "Who is Axl?",
+    "downloadBtn": "Download for Windows",
+    "versionLoading": "Loading version...",
+    "versionLatest": "Latest version",
+    "versionText": "Version"
+  },
+  "tooltip": {
+    "title": "Hey! Quick heads up:",
+    "message": "Since I'm an indie dev, Microsoft SmartScreen doesn't recognize me yet. Just click <strong>\"More Info\"</strong> and then <strong>\"Run anyway\"</strong> to get past the warning.",
+    "footer": "The more people download, the more Microsoft will trust us. Sorry for the hassle!"
+  },
+  "persona": {
+    "note": "Can't stand Axl? No worries! There are other companions available, and you can even create your own!"
+  },
+  "footer": {
+    "madeWith": "Made with love",
+    "madeWithAnd": "and coffee",
+    "disclaimer": "Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.",
+    "privacy": "Privacy & Transparency",
+    "terms": "Terms of Service",
+    "about": "Who is Axl?",
+    "language": "Language"
+  }
+}

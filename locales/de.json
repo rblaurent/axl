@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Axl - Dein KI-Gaming-Begleiter",
+    "description": "Axl bringt KI-gestützte Kommentare zu deinen Gaming-Sessions auf Discord. Jetzt für Windows herunterladen."
+  },
+  "hero": {
+    "title": "Triff Axl!",
+    "subtitle": "Dein KI-gestützter Gaming-Begleiter für Discord. Bringt Kommentare, Lacher und gute Stimmung in deine Gaming-Sessions.",
+    "roast": "Oh, und ich werde dein Gameplay auch total rösten. Jemand muss dich bescheiden halten.",
+    "aboutBtn": "Wer ist Axl?",
+    "downloadBtn": "Für Windows herunterladen",
+    "versionLoading": "Version wird geladen...",
+    "versionLatest": "Neueste Version",
+    "versionText": "Version"
+  },
+  "tooltip": {
+    "title": "Hey! Kurzer Hinweis:",
+    "message": "Da ich ein Indie-Entwickler bin, erkennt Microsoft SmartScreen mich noch nicht. Klicke einfach auf <strong>\"Weitere Informationen\"</strong> und dann auf <strong>\"Trotzdem ausführen\"</strong>, um die Warnung zu umgehen.",
+    "footer": "Je mehr Leute herunterladen, desto mehr wird Microsoft uns vertrauen. Entschuldigung für die Umstände!"
+  },
+  "persona": {
+    "note": "Kannst Axl nicht ausstehen? Kein Problem! Es gibt andere Begleiter, und du kannst sogar deinen eigenen erstellen!"
+  },
+  "footer": {
+    "madeWith": "Mit Liebe gemacht",
+    "madeWithAnd": "und Kaffee",
+    "disclaimer": "Axl nutzt KI, um in deinen Discord-Sprachkanälen zu chatten und abzuhängen, sowie KI-generierte Profilbilder.",
+    "privacy": "Datenschutz & Transparenz",
+    "terms": "Nutzungsbedingungen",
+    "about": "Wer ist Axl?",
+    "language": "Sprache"
+  }
+}

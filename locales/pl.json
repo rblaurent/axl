@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Axl - Twój Towarzysz Gier AI",
+    "description": "Axl dostarcza komentarze napędzane przez AI do twoich sesji gier na Discordzie. Pobierz teraz dla Windows."
+  },
+  "hero": {
+    "title": "Poznaj Axla!",
+    "subtitle": "Twój towarzysz gier napędzany AI dla Discorda. Przynosi komentarze, śmiech i dobrą atmosferę do twoich sesji gier.",
+    "roast": "Och, i totalnie będę krytykował twój gameplay. Ktoś musi cię utrzymać w pokorze.",
+    "aboutBtn": "Kim jest Axl?",
+    "downloadBtn": "Pobierz dla Windows",
+    "versionLoading": "Ładowanie wersji...",
+    "versionLatest": "Najnowsza wersja",
+    "versionText": "Wersja"
+  },
+  "tooltip": {
+    "title": "Hej! Szybka informacja:",
+    "message": "Ponieważ jestem niezależnym deweloperem, Microsoft SmartScreen jeszcze mnie nie rozpoznaje. Po prostu kliknij <strong>\"Więcej informacji\"</strong>, a następnie <strong>\"Uruchom mimo to\"</strong>, aby ominąć ostrzeżenie.",
+    "footer": "Im więcej osób pobierze, tym bardziej Microsoft nam zaufa. Przepraszam za niedogodności!"
+  },
+  "persona": {
+    "note": "Nie możesz znieść Axla? Nie ma problemu! Dostępni są inni towarzysze, a nawet możesz stworzyć własnego!"
+  },
+  "footer": {
+    "madeWith": "Stworzone z miłością",
+    "madeWithAnd": "i kawą",
+    "disclaimer": "Axl używa AI do czatowania i spędzania czasu na twoich kanałach głosowych Discord, a także zdjęć profilowych generowanych przez AI.",
+    "privacy": "Prywatność i Przejrzystość",
+    "terms": "Warunki Usługi",
+    "about": "Kim jest Axl?",
+    "language": "Język"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "title": "Axl - Seu Companheiro de Jogos com IA",
+    "description": "Axl traz comentários alimentados por IA para suas sessões de jogos no Discord. Baixe agora para Windows."
+  },
+  "hero": {
+    "title": "Conheça o Axl!",
+    "subtitle": "Seu companheiro de jogos com IA para Discord. Trazendo comentários, risadas e boas vibrações para suas sessões de jogos.",
+    "roast": "Ah, e eu vou criticar totalmente seu gameplay também. Alguém tem que te manter humilde.",
+    "aboutBtn": "Quem é Axl?",
+    "downloadBtn": "Baixar para Windows",
+    "versionLoading": "Carregando versão...",
+    "versionLatest": "Última versão",
+    "versionText": "Versão"
+  },
+  "tooltip": {
+    "title": "Ei! Aviso rápido:",
+    "message": "Como sou um desenvolvedor independente, o Microsoft SmartScreen ainda não me reconhece. Apenas clique em <strong>\"Mais informações\"</strong> e depois em <strong>\"Executar mesmo assim\"</strong> para passar o aviso.",
+    "footer": "Quanto mais pessoas baixarem, mais a Microsoft confiará em nós. Desculpe pelo inconveniente!"
+  },
+  "persona": {
+    "note": "Não suporta o Axl? Sem problemas! Existem outros companheiros disponíveis, e você pode até criar o seu próprio!"
+  },
+  "footer": {
+    "madeWith": "Feito com amor",
+    "madeWithAnd": "e café",
+    "disclaimer": "Axl usa IA para conversar e passar o tempo em seus canais de voz do Discord, e também fotos de perfil geradas por IA.",
+    "privacy": "Privacidade e Transparência",
+    "terms": "Termos de Serviço",
+    "about": "Quem é Axl?",
+    "language": "Idioma"
+  }
+}
