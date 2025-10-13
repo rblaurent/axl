@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy & Transparency - Axl</title>
-    <meta name="description" content="Learn how Axl handles your data, what we collect, and how you can control your privacy.">
+    <title data-i18n="privacy.meta.title">Privacy & Transparency - Axl</title>
+    <meta name="description" content="Learn how Axl handles your data, what we collect, and how you can control your privacy." data-i18n-meta="privacy.meta.description">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
@@ -282,15 +282,15 @@
             <div class="policy-content">
                 <a href="index.html" class="back-link">
                     <span>←</span>
-                    <span>Back to Home</span>
+                    <span data-i18n="common.backToHome">Back to Home</span>
                 </a>
 
                 <!-- Header -->
                 <div class="policy-header">
-                    <h1 class="policy-title">Privacy & Transparency</h1>
+                    <h1 class="policy-title" data-i18n="privacy.header.title">Privacy & Transparency</h1>
                     <div class="policy-intro">
-                        <p>Let's talk about AI and your data. With all these AI apps out there, it's often unclear where your data goes, who sees it, and what happens to it. I get it - it's frustrating and honestly a bit scary.</p>
-                        <p style="margin-top: 1rem;">Here's what I'm trying to do: tell you what Axl does with your data, where it goes, and how you can control it. No vague terms, no corporate speak, just straight talk.</p>
+                        <p data-i18n="privacy.header.intro1">Let's talk about AI and your data. With all these AI apps out there, it's often unclear where your data goes, who sees it, and what happens to it. I get it - it's frustrating and honestly a bit scary.</p>
+                        <p style="margin-top: 1rem;" data-i18n="privacy.header.intro2">Here's what I'm trying to do: tell you what Axl does with your data, where it goes, and how you can control it. No vague terms, no corporate speak, just straight talk.</p>
                     </div>
                 </div>
 
@@ -300,9 +300,9 @@
                         <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                         </svg>
-                        <h2 class="section-title">TL;DR</h2>
+                        <h2 class="section-title" data-i18n="privacy.tldr.title">TL;DR</h2>
                     </div>
-                    <p class="section-text">
+                    <p class="section-text" data-i18n-html="privacy.tldr.intro">
                         Your screenshots and audio are stored <span class="highlight">locally</span> on your PC in
                         <span class="code-text">%LocalAppData%\Roaster</span>. I send data to AI services (Claude, ElevenLabs)
                         and Discord only when needed to make Axl work. I track anonymous usage stats to improve the app. I don't sell your data.
@@ -311,19 +311,19 @@
                         <ul class="check-list">
                             <li class="check-item">
                                 <span class="check-icon">✓</span>
-                                <span>Screenshots and audio stay on your PC</span>
+                                <span data-i18n="privacy.tldr.point1">Screenshots and audio stay on your PC</span>
                             </li>
                             <li class="check-item">
                                 <span class="check-icon">✓</span>
-                                <span>I don't access your screenshots, audio, or Discord messages</span>
+                                <span data-i18n="privacy.tldr.point2">I don't access your screenshots, audio, or Discord messages</span>
                             </li>
                             <li class="check-item">
                                 <span class="check-icon">✓</span>
-                                <span>I don't sell your data</span>
+                                <span data-i18n="privacy.tldr.point3">I don't sell your data</span>
                             </li>
                             <li class="check-item">
                                 <span class="check-icon">✓</span>
-                                <span>Voice recognition happens locally (Vosk)</span>
+                                <span data-i18n="privacy.tldr.point4">Voice recognition happens locally (Vosk)</span>
                             </li>
                         </ul>
                     </div>
@@ -335,52 +335,52 @@
                         <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
                         </svg>
-                        <h2 class="section-title">Where Your Data Goes</h2>
+                        <h2 class="section-title" data-i18n="privacy.dataFlow.title">Where Your Data Goes</h2>
                     </div>
-                    <p class="section-text">
+                    <p class="section-text" data-i18n="privacy.dataFlow.intro">
                         To make Axl work, I send your data to these AI services. Here's what gets sent to each one:
                     </p>
 
                     <div class="info-box">
-                        <div class="info-box-title">💡 Anthropic (Claude AI)</div>
-                        <p class="info-box-text">
+                        <div class="info-box-title" data-i18n="privacy.dataFlow.anthropic.title">💡 Anthropic (Claude AI)</div>
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.anthropic.whatSend">
                             <span class="highlight">What I send:</span> Your gameplay screenshots, conversation history (what Axl said before), and the companion's personality prompt.
                         </p>
-                        <p class="info-box-text">
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.anthropic.why">
                             <span class="highlight">Why:</span> So Claude can analyze what's happening in your game and generate relevant commentary.
                         </p>
-                        <p class="info-box-text">
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.anthropic.whatDontSend">
                             <span class="highlight">What I DON'T send:</span> Your Discord messages, voice chat audio, or any personal info.
                         </p>
-                        <p class="small-text">Check their privacy policy at anthropic.com/privacy</p>
+                        <p class="small-text" data-i18n="privacy.dataFlow.anthropic.policy">Check their privacy policy at anthropic.com/privacy</p>
                     </div>
 
                     <div class="info-box">
-                        <div class="info-box-title">🔊 ElevenLabs (Text-to-Speech)</div>
-                        <p class="info-box-text">
+                        <div class="info-box-title" data-i18n="privacy.dataFlow.elevenlabs.title">🔊 ElevenLabs (Text-to-Speech)</div>
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.elevenlabs.whatSend">
                             <span class="highlight">What I send:</span> Only the text of Axl's commentary (what Claude generated).
                         </p>
-                        <p class="info-box-text">
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.elevenlabs.why">
                             <span class="highlight">Why:</span> To convert the text into Axl's voice.
                         </p>
-                        <p class="info-box-text">
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.elevenlabs.whatDontSend">
                             <span class="highlight">What I DON'T send:</span> Your screenshots, game info, or anything else. Just the commentary text.
                         </p>
-                        <p class="small-text">Check their privacy policy at elevenlabs.io/privacy</p>
+                        <p class="small-text" data-i18n="privacy.dataFlow.elevenlabs.policy">Check their privacy policy at elevenlabs.io/privacy</p>
                     </div>
 
                     <div class="info-box">
-                        <div class="info-box-title">💬 Discord (Voice Playback)</div>
-                        <p class="info-box-text">
+                        <div class="info-box-title" data-i18n="privacy.dataFlow.discord.title">💬 Discord (Voice Playback)</div>
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.discord.whatGoesThrough">
                             <span class="highlight">What goes through:</span> Only the audio file of Axl's voice.
                         </p>
-                        <p class="info-box-text">
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.discord.why">
                             <span class="highlight">Why:</span> To play it in your Discord voice channel.
                         </p>
-                        <p class="info-box-text">
+                        <p class="info-box-text" data-i18n-html="privacy.dataFlow.discord.note">
                             <span class="highlight">Note:</span> Axl uses your Discord server - she doesn't read messages or access any Discord data.
                         </p>
-                        <p class="small-text">Check their privacy policy at discord.com/privacy</p>
+                        <p class="small-text" data-i18n="privacy.dataFlow.discord.policy">Check their privacy policy at discord.com/privacy</p>
                     </div>
                 </div>
 
@@ -392,71 +392,71 @@
                             <line x1="12" y1="20" x2="12" y2="4"></line>
                             <line x1="6" y1="20" x2="6" y2="14"></line>
                         </svg>
-                        <h2 class="section-title">What I Actually Collect</h2>
+                        <h2 class="section-title" data-i18n="privacy.collection.title">What I Actually Collect</h2>
                     </div>
-                    <p class="section-text">
+                    <p class="section-text" data-i18n="privacy.collection.intro">
                         I use Google Analytics to understand how people use Axl. This helps me fix bugs and know which features to build next.
                     </p>
 
                     <div class="info-box">
-                        <div class="info-box-title">Essential (always collected):</div>
+                        <div class="info-box-title" data-i18n="privacy.collection.essential.title">Essential (always collected):</div>
                         <ul class="bullet-list">
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>App starts</span>
+                                <span data-i18n="privacy.collection.essential.item1">App starts</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>API call performance (response times)</span>
+                                <span data-i18n="privacy.collection.essential.item2">API call performance (response times)</span>
                             </li>
                         </ul>
                     </div>
 
                     <div class="info-box">
-                        <div class="info-box-title">Optional (you can disable this):</div>
+                        <div class="info-box-title" data-i18n="privacy.collection.optional.title">Optional (you can disable this):</div>
                         <ul class="bullet-list">
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Feature usage (screenshots captured, voice commands used, etc.)</span>
+                                <span data-i18n="privacy.collection.optional.item1">Feature usage (screenshots captured, voice commands used, etc.)</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Which settings you change (but not the actual values!)</span>
+                                <span data-i18n="privacy.collection.optional.item2">Which settings you change (but not the actual values!)</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Crashes and errors (stack traces are hashed for privacy)</span>
+                                <span data-i18n="privacy.collection.optional.item3">Crashes and errors (stack traces are hashed for privacy)</span>
                             </li>
                         </ul>
                     </div>
 
                     <div class="info-box">
-                        <div class="info-box-title">What I DON'T track:</div>
+                        <div class="info-box-title" data-i18n="privacy.collection.dontTrack.title">What I DON'T track:</div>
                         <ul class="bullet-list">
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Your screenshots or what games you play</span>
+                                <span data-i18n="privacy.collection.dontTrack.item1">Your screenshots or what games you play</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Your API keys or any credentials</span>
+                                <span data-i18n="privacy.collection.dontTrack.item2">Your API keys or any credentials</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Your Discord server info or messages</span>
+                                <span data-i18n="privacy.collection.dontTrack.item3">Your Discord server info or messages</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>What Axl says (the actual commentary)</span>
+                                <span data-i18n="privacy.collection.dontTrack.item4">What Axl says (the actual commentary)</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span>Your personally identifiable information</span>
+                                <span data-i18n="privacy.collection.dontTrack.item5">Your personally identifiable information</span>
                             </li>
                         </ul>
                     </div>
 
-                    <p class="emphasis-text">
+                    <p class="emphasis-text" data-i18n="privacy.collection.randomId">
                         Each installation gets a random ID so I can count users without knowing who you are. It's like a "User #12345" situation.
                     </p>
                 </div>
@@ -469,28 +469,28 @@
                             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
                             <line x1="12" y1="17" x2="12.01" y2="17"></line>
                         </svg>
-                        <h2 class="section-title">Why I Need This</h2>
+                        <h2 class="section-title" data-i18n="privacy.whyNeed.title">Why I Need This</h2>
                     </div>
-                    <p class="section-text">
+                    <p class="section-text" data-i18n="privacy.whyNeed.intro">
                         As a solo dev, analytics help me make Axl better without bothering you with surveys. I can see:
                     </p>
                     <div class="info-box">
                         <ul class="bullet-list">
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span><span class="highlight">Is anyone actually using this?</span> (nothing's sadder than building features nobody uses)</span>
+                                <span data-i18n-html="privacy.whyNeed.item1"><span class="highlight">Is anyone actually using this?</span> (nothing's sadder than building features nobody uses)</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span><span class="highlight">Which features are popular?</span> (so I can make them even better)</span>
+                                <span data-i18n-html="privacy.whyNeed.item2"><span class="highlight">Which features are popular?</span> (so I can make them even better)</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span><span class="highlight">What's breaking?</span> (crashes and errors I need to fix)</span>
+                                <span data-i18n-html="privacy.whyNeed.item3"><span class="highlight">What's breaking?</span> (crashes and errors I need to fix)</span>
                             </li>
                             <li class="bullet-item">
                                 <span class="bullet-icon">•</span>
-                                <span><span class="highlight">How's performance?</span> (if API calls are taking forever, I need to know)</span>
+                                <span data-i18n-html="privacy.whyNeed.item4"><span class="highlight">How's performance?</span> (if API calls are taking forever, I need to know)</span>
                             </li>
                         </ul>
                     </div>
@@ -503,52 +503,70 @@
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                             <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                        <h2 class="section-title">Your Rights</h2>
+                        <h2 class="section-title" data-i18n="privacy.rights.title">Your Rights</h2>
                     </div>
-                    <p class="section-text">
+                    <p class="section-text" data-i18n="privacy.rights.intro">
                         You're in control. Here's what you can do:
                     </p>
 
                     <div class="info-box">
-                        <div class="info-box-title">Delete your local data:</div>
-                        <p class="info-box-text">
+                        <div class="info-box-title" data-i18n="privacy.rights.deleteLocal.title">Delete your local data:</div>
+                        <p class="info-box-text" data-i18n-html="privacy.rights.deleteLocal.text">
                             Just uninstall Axl and delete the <span class="code-text">%LocalAppData%\Roaster</span> folder.
                             That's it. All your local settings and data are gone.
                         </p>
                     </div>
 
                     <div class="info-box">
-                        <div class="info-box-title">Your Analytics ID:</div>
-                        <p class="info-box-text">
+                        <div class="info-box-title" data-i18n="privacy.rights.analyticsId.title">Your Analytics ID:</div>
+                        <p class="info-box-text" data-i18n="privacy.rights.analyticsId.text">
                             Each installation gets a unique ID for anonymous analytics. You can find yours in the app settings.
                         </p>
-                        <p class="small-text">
+                        <p class="small-text" data-i18n="privacy.rights.analyticsId.note">
                             Note: Google Analytics doesn't offer a self-service data deletion API. If you want your analytics data deleted,
                             email me with your ID and I'll manually remove it from GA4.
                         </p>
                     </div>
 
                     <div class="info-box">
-                        <div class="info-box-title">Questions?</div>
-                        <p class="info-box-text">
+                        <div class="info-box-title" data-i18n="privacy.rights.questions.title">Questions?</div>
+                        <p class="info-box-text" data-i18n-html="privacy.rights.questions.text">
                             Open an issue on GitHub (<span class="highlight">github.com/rblaurent/axl</span>) or DM me.
                         </p>
                     </div>
                 </div>
 
                 <div class="footer-note">
-                    Made with love <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> and coffee <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg><br>
-                    Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.<br>
-                    <a href="privacy.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Privacy & Transparency</a>
+                    <span data-i18n="footer.madeWith">Made with love</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span data-i18n="footer.madeWithAnd">and coffee</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg><br>
+                    <span data-i18n="footer.disclaimer">Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.</span><br>
+                    <a href="privacy.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.privacy">Privacy & Transparency</a>
                     <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
-                    <a href="terms.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Terms of Service</a>
+                    <a href="terms.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.terms">Terms of Service</a>
                     <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
-                    <a href="about.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;">Who is Axl?</a>
+                    <a href="about.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.about">Who is Axl?</a>
+                    <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                    <span class="language-switcher">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 4px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <select id="languageSwitcher" style="background: transparent; border: none; color: var(--accent-green); font-weight: 500; cursor: pointer; font-family: inherit; font-size: inherit;">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="pl">Polski</option>
+                        </select>
+                    </span>
                     <br><br>
-                    Last updated: October 2025
+                    <span data-i18n="privacy.footer.lastUpdated">Last updated: October 2025</span>
                 </div>
             </div>
         </div>
     </div>
+    <script src="i18n.js"></script>
 </body>
 </html>

@@ -1,33 +1,258 @@
 {
+  "common": {
+    "backToHome": "Voltar para o Início"
+  },
   "meta": {
-    "title": "Axl - Seu Companheiro de Jogos com IA",
-    "description": "Axl traz comentários alimentados por IA para suas sessões de jogos no Discord. Baixe agora para Windows."
+    "title": "Axl - Seu Companheiro de IA para Jogos",
+    "description": "Axl traz comentários alimentados por IA para suas sessões de jogo no Discord. Baixe agora para Windows."
   },
   "hero": {
-    "title": "Conheça o Axl!",
-    "subtitle": "Seu companheiro de jogos com IA para Discord. Trazendo comentários, risadas e boas vibrações para suas sessões de jogos.",
-    "roast": "Ah, e eu vou criticar totalmente seu gameplay também. Alguém tem que te manter humilde.",
-    "aboutBtn": "Quem é Axl?",
+    "title": "Conheça a Axl!",
+    "subtitle": "Sua companheira de jogos alimentada por IA para Discord. Trazendo os comentários, risadas e boas vibrações para suas sessões de jogo.",
+    "roast": "\"Ah, e eu vou zoar totalmente sua jogabilidade também. Alguém tem que te manter humilde.\"",
+    "aboutBtn": "Quem é a Axl?",
     "downloadBtn": "Baixar para Windows",
     "versionLoading": "Carregando versão...",
-    "versionLatest": "Última versão",
+    "versionLatest": "Versão mais recente",
     "versionText": "Versão"
   },
   "tooltip": {
     "title": "Ei! Aviso rápido:",
-    "message": "Como sou um desenvolvedor independente, o Microsoft SmartScreen ainda não me reconhece. Apenas clique em <strong>\"Mais informações\"</strong> e depois em <strong>\"Executar mesmo assim\"</strong> para passar o aviso.",
-    "footer": "Quanto mais pessoas baixarem, mais a Microsoft confiará em nós. Desculpe pelo inconveniente!"
+    "message": "Como sou um dev independente, o Microsoft SmartScreen ainda não me reconhece. Apenas clique em <strong>\"Mais Informações\"</strong> e depois em <strong>\"Executar assim mesmo\"</strong> para passar o aviso.",
+    "footer": "Quanto mais pessoas baixarem, mais a Microsoft vai confiar em nós. Desculpa o inconveniente! 😅"
   },
   "persona": {
-    "note": "Não suporta o Axl? Sem problemas! Existem outros companheiros disponíveis, e você pode até criar o seu próprio!"
+    "note": "Não aguenta a Axl? Sem problemas! Existem outros companheiros disponíveis, e você pode até criar o seu próprio!"
   },
   "footer": {
     "madeWith": "Feito com amor",
     "madeWithAnd": "e café",
-    "disclaimer": "Axl usa IA para conversar e passar o tempo em seus canais de voz do Discord, e também fotos de perfil geradas por IA.",
-    "privacy": "Privacidade e Transparência",
+    "disclaimer": "Axl usa IA para conversar e ficar nos seus canais de voz do Discord, e também fotos de perfil geradas por IA.",
+    "privacy": "Privacidade & Transparência",
     "terms": "Termos de Serviço",
-    "about": "Quem é Axl?",
-    "language": "Idioma"
+    "about": "Quem é a Axl?"
+  },
+  "about": {
+    "meta": {
+      "title": "Quem é a Axl? - Axl",
+      "description": "Conheça a Axl - seu bot de Discord companheiro de jogos alimentado por IA que traz comentários para suas sessões de jogo."
+    },
+    "header": {
+      "title": "Quem é a Axl?",
+      "intro1": "Axl é sua companheira de jogos com IA que fica nos seus canais de voz do Discord e comenta sobre sua jogabilidade. Ela observa o que você está jogando, zoa seus erros, comemora suas vitórias e ocasionalmente diz algo hilariantemente sem noção.",
+      "intro2": "Mas vamos deixar claro logo de cara: <span class=\"highlight\">Axl é um bot do Discord</span>. Um bot divertido, personalizável e alimentado por IA. Não é uma pessoa, não é um ser senciente - apenas um software que traz alguma personalidade para suas sessões de jogo."
+    },
+    "whoIs": {
+      "title": "Quem a Axl É",
+      "intro": "Pense na Axl como aquela amiga que sempre tem algo a dizer sobre sua jogabilidade - exceto que é um bot do Discord alimentado por IA.",
+      "item1": "<span class=\"highlight\">Uma companheira bot do Discord</span> - Axl entra no seu canal de voz, observa sua jogabilidade através de capturas de tela e fornece comentários ao vivo",
+      "item2": "<span class=\"highlight\">Entretenimento alimentado por IA</span> - Usa Claude AI para analisar o que está acontecendo e gerar comentários contextuais e cheios de personalidade",
+      "item3": "<span class=\"highlight\">Sua zoadora pessoal (ou torcedora)</span> - Personalidade totalmente customizável, desde zoadora cruel até pessoa animadora wholesome",
+      "item4": "<span class=\"highlight\">Um projeto hobby</span> - Construído por um dev solo que queria um amigo IA para sessões de jogo",
+      "item5": "<span class=\"highlight\">Software de entretenimento</span> - Projetado para adicionar risadas, brincadeiras e o ocasional comentário perspicaz (ou completamente errado) aos seus jogos"
+    },
+    "whoIsNot": {
+      "title": "Quem a Axl NÃO é",
+      "intro": "Aqui vai a realidade. Axl NÃO é um substituto para conexão humana real, ajuda profissional ou coaching sério. Ela é um bot. Um bot divertido do Discord com personalidade, mas ainda apenas um bot.",
+      "item1": "<span class=\"highlight\">Não é uma amiga</span> - Axl não pode substituir amizades humanas reais. Ela é um bot do Discord rodando no seu PC, não um ser senciente",
+      "item2": "<span class=\"highlight\">Não é uma terapeuta ou conselheira</span> - Se você está lutando com saúde mental, por favor converse com um profissional real, não com um bot do Discord",
+      "item3": "<span class=\"highlight\">Não é uma coach</span> - Embora a Axl possa ocasionalmente dizer algo perspicaz sobre sua jogabilidade, ela não é uma coach profissional de jogos",
+      "item4": "<span class=\"highlight\">Nem sempre apropriada</span> - Os comentários da Axl dependem da sua configuração de personalidade. Se você definir como \"modo zoação\", espere zoações. Se ela disser algo inapropriado, a culpa é da configuração",
+      "item5": "<span class=\"highlight\">Não é infalível</span> - IA pode interpretar mal capturas de tela, dizer coisas estranhas ou perder completamente o ponto. Acontece"
+    },
+    "realityCheck": {
+      "title": "A Realidade",
+      "intro": "Aqui está a parada sobre IA: é muito inteligente, mas também muito burra. Às vezes ao mesmo tempo.",
+      "quote": "\"Ela pode dizer coisas estúpidas (mas meio relevantes), e coisas muito inteligentes (mas totalmente irrelevantes).\"",
+      "explanation": "Axl pode acertar perfeitamente a vibe da sua jogada clutch, ou pode interpretar completamente mal a situação e dizer algo bizarro. É IA. É parte do charme, honestamente.",
+      "thingsTitle": "Coisas que podem (e vão) acontecer:",
+      "thing1": "• Axl interpreta mal uma captura de tela e faz um comentário que não combina com o que está acontecendo",
+      "thing2": "• Ela fica em silêncio durante um momento épico porque não achou que valia a pena comentar",
+      "thing3": "• Ela faz uma suposição hilariantemente errada sobre sua jogabilidade",
+      "thing4": "• Ela acerta a zoação perfeita ou encorajamento exatamente no momento certo",
+      "thing5": "• Se mal configurada, ela pode dizer algo inapropriado ou irritante (é por isso que a configuração de personalidade importa!)"
+    },
+    "dontTakeSeriously": {
+      "title": "Não Leve Muito a Sério",
+      "intro": "Esta é a parte mais importante: <span class=\"highlight\">Axl é feita para ser divertida</span>. Se ela disser algo bobo, ria. Se ela te zoar demais, ajuste a personalidade. Se ela estiver sendo irritante, desligue.",
+      "paragraph1": "Ela é uma ferramenta de entretenimento. Não é uma companheira real, não é uma amiga, não é uma coach - apenas um bot divertido do Discord que torna suas sessões de jogo um pouco mais interessantes. Às vezes ela vai te fazer rir, às vezes vai te fazer resmungar, e às vezes você vai se perguntar sobre o que diabos ela está falando.",
+      "paragraph2": "Essa é a experiência. Se você está de acordo com isso, você provavelmente vai amar a Axl. Se você está procurando algo mais sério ou confiável, isso pode não ser para você - e está tudo bem."
+    },
+    "howItWorks": {
+      "title": "Como Funciona na Prática",
+      "intro": "Por baixo dos panos, Axl é bem simples:",
+      "flowTitle": "O fluxo técnico:",
+      "step1": "1. Captura sua tela a cada minuto (ou quando você aperta a tecla de atalho)",
+      "step2": "2. Envia a captura de tela para Claude AI (usando sua chave de API)",
+      "step3": "3. Claude analisa e decide se vale a pena comentar algo",
+      "step4": "4. Se sim, gera comentários baseados na personalidade que você escolheu",
+      "step5": "5. Envia o texto para ElevenLabs para converter em voz (usando sua chave de API)",
+      "step6": "6. Reproduz o áudio no seu canal de voz do Discord através de um bot",
+      "conclusion": "É isso. Sem mágica, sem consciência, sem senciência. Apenas chamadas de API, alguns prompts inteligentes e text-to-speech. A \"inteligência\" vem do Claude AI, que é poderoso mas ainda apenas um modelo de linguagem que pode interpretar mal as coisas."
+    },
+    "responsibility": {
+      "title": "Sua Responsabilidade",
+      "intro": "Você está no controle de como a Axl se comporta:",
+      "item1": "<span class=\"highlight\">Escolha a personalidade com sabedoria</span> - Se você definir a Axl para \"modo zoação máxima\", não se surpreenda quando ela te zoar",
+      "item2": "<span class=\"highlight\">Esteja atento em espaços compartilhados</span> - Se a Axl disser algo inapropriado numa chamada do Discord com outros, a culpa é sua pela configuração",
+      "item3": "<span class=\"highlight\">Monitore o uso da sua API</span> - Você está pagando pelas chamadas de API. Fique de olho nos custos",
+      "item4": "<span class=\"highlight\">Use com responsabilidade</span> - Não use a Axl para assediar outros, fazer spam ou fazer qualquer coisa contra os termos do Discord ou dos serviços de IA"
+    },
+    "bottomLine": {
+      "title": "O Resumo",
+      "paragraph1": "Axl é um experimento divertido de IA que pode adicionar entretenimento às suas sessões de jogo. Ela vai dizer coisas engraçadas, inteligentes, bobas e ocasionalmente inapropriadas se mal configurada.",
+      "paragraph2": "Se você abordar como um bot de entretenimento peculiar e não como algo mais sério, você provavelmente vai se divertir muito. Se você espera perfeição, precisão consistente ou algo que mude sua vida, você vai se decepcionar.",
+      "paragraph3": "É um projeto hobby feito por diversão. Trate como tal, e você vai curtir. Leve muito a sério, e você vai ficar frustrado.",
+      "paragraph4": "Agora que definimos as expectativas - vá se divertir! Baixe a Axl, configure uma personalidade que você goste e veja o que acontece. Apenas lembre-se: é um bot. Um bot divertido, mas ainda apenas um bot."
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacidade & Transparência - Axl",
+      "description": "Saiba como a Axl lida com seus dados, o que coletamos e como você pode controlar sua privacidade."
+    },
+    "header": {
+      "title": "Privacidade & Transparência",
+      "intro1": "Vamos falar sobre IA e seus dados. Com todos esses apps de IA por aí, muitas vezes não fica claro para onde seus dados vão, quem os vê e o que acontece com eles. Eu entendo - é frustrante e honestamente um pouco assustador.",
+      "intro2": "Aqui está o que eu estou tentando fazer: te contar o que a Axl faz com seus dados, para onde eles vão e como você pode controlar isso. Sem termos vagos, sem fala corporativa, apenas conversa direta."
+    },
+    "tldr": {
+      "title": "TL;DR",
+      "intro": "Suas capturas de tela e áudio são armazenadas <span class=\"highlight\">localmente</span> no seu PC em <span class=\"code-text\">%LocalAppData%\\Roaster</span>. Eu envio dados para serviços de IA (Claude, ElevenLabs) e Discord apenas quando necessário para fazer a Axl funcionar. Eu rastreio estatísticas de uso anônimas para melhorar o app. Eu não vendo seus dados.",
+      "point1": "Capturas de tela e áudio ficam no seu PC",
+      "point2": "Eu não acesso suas capturas de tela, áudio ou mensagens do Discord",
+      "point3": "Eu não vendo seus dados",
+      "point4": "Reconhecimento de voz acontece localmente (Vosk)"
+    },
+    "dataFlow": {
+      "title": "Para Onde Seus Dados Vão",
+      "intro": "Para fazer a Axl funcionar, eu envio seus dados para esses serviços de IA. Aqui está o que é enviado para cada um:",
+      "anthropic": {
+        "title": "💡 Anthropic (Claude AI)",
+        "whatSend": "<span class=\"highlight\">O que eu envio:</span> Suas capturas de tela de jogo, histórico de conversa (o que a Axl disse antes) e o prompt de personalidade do companheiro.",
+        "why": "<span class=\"highlight\">Por quê:</span> Para que o Claude possa analisar o que está acontecendo no seu jogo e gerar comentários relevantes.",
+        "whatDontSend": "<span class=\"highlight\">O que eu NÃO envio:</span> Suas mensagens do Discord, áudio de chat de voz ou qualquer informação pessoal.",
+        "policy": "Confira a política de privacidade deles em anthropic.com/privacy"
+      },
+      "elevenlabs": {
+        "title": "🔊 ElevenLabs (Text-to-Speech)",
+        "whatSend": "<span class=\"highlight\">O que eu envio:</span> Apenas o texto dos comentários da Axl (o que o Claude gerou).",
+        "why": "<span class=\"highlight\">Por quê:</span> Para converter o texto na voz da Axl.",
+        "whatDontSend": "<span class=\"highlight\">O que eu NÃO envio:</span> Suas capturas de tela, informações do jogo ou qualquer outra coisa. Apenas o texto dos comentários.",
+        "policy": "Confira a política de privacidade deles em elevenlabs.io/privacy"
+      },
+      "discord": {
+        "title": "💬 Discord (Reprodução de Voz)",
+        "whatGoesThrough": "<span class=\"highlight\">O que passa por lá:</span> Apenas o arquivo de áudio da voz da Axl.",
+        "why": "<span class=\"highlight\">Por quê:</span> Para tocar no seu canal de voz do Discord.",
+        "note": "<span class=\"highlight\">Nota:</span> Axl usa seu servidor do Discord - ela não lê mensagens ou acessa nenhum dado do Discord.",
+        "policy": "Confira a política de privacidade deles em discord.com/privacy"
+      }
+    },
+    "collection": {
+      "title": "O Que Eu Realmente Coleto",
+      "intro": "Eu uso Google Analytics para entender como as pessoas usam a Axl. Isso me ajuda a corrigir bugs e saber quais recursos construir a seguir.",
+      "essential": {
+        "title": "Essencial (sempre coletado):",
+        "item1": "Inicializações do app",
+        "item2": "Performance de chamadas de API (tempos de resposta)"
+      },
+      "optional": {
+        "title": "Opcional (você pode desabilitar isso):",
+        "item1": "Uso de recursos (capturas de tela capturadas, comandos de voz usados, etc.)",
+        "item2": "Quais configurações você muda (mas não os valores reais!)",
+        "item3": "Travamentos e erros (stack traces são hasheados para privacidade)"
+      },
+      "dontTrack": {
+        "title": "O que eu NÃO rastreio:",
+        "item1": "Suas capturas de tela ou quais jogos você joga",
+        "item2": "Suas chaves de API ou quaisquer credenciais",
+        "item3": "Informações do seu servidor do Discord ou mensagens",
+        "item4": "O que a Axl diz (os comentários reais)",
+        "item5": "Suas informações pessoalmente identificáveis"
+      },
+      "randomId": "Cada instalação recebe um ID aleatório para que eu possa contar usuários sem saber quem você é. É tipo uma situação de \"Usuário #12345\"."
+    },
+    "whyNeed": {
+      "title": "Por Que Eu Preciso Disso",
+      "intro": "Como um dev solo, analytics me ajudam a melhorar a Axl sem incomodar você com pesquisas. Eu posso ver:",
+      "item1": "<span class=\"highlight\">Alguém está realmente usando isso?</span> (nada é mais triste do que construir recursos que ninguém usa)",
+      "item2": "<span class=\"highlight\">Quais recursos são populares?</span> (para que eu possa torná-los ainda melhores)",
+      "item3": "<span class=\"highlight\">O que está quebrando?</span> (travamentos e erros que eu preciso corrigir)",
+      "item4": "<span class=\"highlight\">Como está a performance?</span> (se chamadas de API estão demorando uma eternidade, eu preciso saber)"
+    },
+    "rights": {
+      "title": "Seus Direitos",
+      "intro": "Você está no controle. Aqui está o que você pode fazer:",
+      "deleteLocal": {
+        "title": "Deletar seus dados locais:",
+        "text": "Apenas desinstale a Axl e delete a pasta <span class=\"code-text\">%LocalAppData%\\Roaster</span>. É isso. Todas as suas configurações e dados locais sumiram."
+      },
+      "analyticsId": {
+        "title": "Seu ID de Analytics:",
+        "text": "Cada instalação recebe um ID único para analytics anônimos. Você pode encontrar o seu nas configurações do app.",
+        "note": "Nota: Google Analytics não oferece uma API de auto-serviço para deleção de dados. Se você quiser seus dados de analytics deletados, me envie um email com seu ID e eu vou removê-los manualmente do GA4."
+      },
+      "questions": {
+        "title": "Dúvidas?",
+        "text": "Abra uma issue no GitHub (<span class=\"highlight\">github.com/rblaurent/axl</span>) ou me mande uma DM."
+      }
+    },
+    "footer": {
+      "lastUpdated": "Última atualização: Outubro de 2025"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Termos de Serviço - Axl",
+      "description": "Termos de Serviço para usar a Axl, sua companheira de jogos com IA."
+    },
+    "header": {
+      "title": "Termos de Serviço",
+      "intro": "Estes são os termos para usar a Axl. Estou mantendo isso direto e honesto - sem sobrecarga de jargão jurídico. Ao baixar e usar a Axl, você está concordando com estes termos."
+    },
+    "whatIs": {
+      "title": "O Que é a Axl",
+      "text": "Axl é uma aplicação desktop do Windows que fornece comentários de jogos alimentados por IA através de canais de voz do Discord. É um projeto hobby construído por um desenvolvedor solo."
+    },
+    "responsibilities": {
+      "title": "Suas Responsabilidades",
+      "intro": "Quando você usa a Axl, você é responsável por:",
+      "item1": "<span class=\"highlight\">Fornecer suas próprias chaves de API</span> para os serviços Claude (Anthropic) e ElevenLabs",
+      "item2": "<span class=\"highlight\">Pagar pelos seus próprios custos de uso de API</span> - Axl faz chamadas de API em seu nome usando suas chaves, e você é cobrado diretamente por esses serviços",
+      "item3": "<span class=\"highlight\">Cumprir os Termos de Serviço do Discord</span> - Axl se conecta ao Discord, então você precisa seguir as regras deles",
+      "item4": "<span class=\"highlight\">Seguir os termos de serviço</span> da Anthropic, ElevenLabs e quaisquer outros serviços com os quais a Axl se integra",
+      "item5": "<span class=\"highlight\">Usar a Axl legalmente e com responsabilidade</span> - não use para assediar pessoas, fazer spam ou fazer qualquer coisa ilegal"
+    },
+    "warranties": {
+      "title": "Sem Garantias (\"Como Está\")",
+      "intro": "Axl é fornecida <span class=\"highlight\">\"como está\"</span> sem quaisquer garantias. Isso significa:",
+      "item1": "Não posso garantir que vai funcionar perfeitamente o tempo todo",
+      "item2": "Bugs acontecem - vou tentar corrigir, mas sem promessas de prazo",
+      "item3": "Atualizações podem quebrar coisas temporariamente",
+      "item4": "Não sou responsável se os serviços de API caírem ou mudarem seus preços",
+      "outro": "Estou fazendo o meu melhor para tornar a Axl incrível, mas é um projeto hobby e as coisas podem dar errado."
+    },
+    "liability": {
+      "title": "Limitação de Responsabilidade",
+      "intro": "Não sou responsável por:",
+      "item1": "Custos de API que você acumula usando a Axl - você controla as chaves de API e o uso",
+      "item2": "Quaisquer problemas com Discord, Anthropic, ElevenLabs ou outros serviços de terceiros",
+      "item3": "Perda ou corrupção de dados",
+      "item4": "Quaisquer danos (diretos ou indiretos) do uso da Axl",
+      "outro": "Use a Axl por sua própria conta e risco. Se algo der errado, vou tentar ajudar, mas não posso ser responsabilizado legal ou financeiramente."
+    },
+    "updates": {
+      "title": "Atualizações e Mudanças",
+      "text1": "Posso atualizar, modificar ou descontinuar a Axl a qualquer momento sem aviso. Também posso atualizar estes termos quando necessário.",
+      "text2": "Se eu fizer mudanças significativas nos termos, vou atualizar a data de \"Última atualização\" no final desta página."
+    },
+    "contact": {
+      "title": "Dúvidas?",
+      "text": "Se você tem dúvidas sobre estes termos, abra uma issue no GitHub ou entre em contato comigo diretamente."
+    },
+    "footer": {
+      "lastUpdated": "Última atualização: Outubro de 2025"
+    }
   }
 }
