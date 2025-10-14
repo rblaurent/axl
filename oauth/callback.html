@@ -4,7 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authentication Successful - Axl</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../resources/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Sansation:wght@300;400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Color scheme matching Axl app */
+        :root {
+            --bg-dark: #1e1f22EE;
+            --bg-darker: #15161a;
+            --bg-card: #2b2d31;
+            --accent-green: #43b581;
+            --accent-green-hover: #3ca374;
+            --text-primary: #ffffff;
+            --text-secondary: #b5bac1;
+            --text-muted: #80848e;
+            --bg-beige: #0f1011;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -12,67 +35,160 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Sansation', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-beige);
+            color: var(--text-primary);
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            color: white;
             padding: 20px;
         }
 
-        .container {
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+            z-index: -2;
+            filter: blur(8px);
+        }
+
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Content Box */
+        .content-box {
+            background: var(--bg-dark);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px) saturate(20%);
+            -webkit-backdrop-filter: blur(20px) saturate(20%);
             text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 60px 80px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
         }
 
-        .checkmark {
-            font-size: 80px;
-            margin-bottom: 20px;
-            animation: bounce 0.6s ease;
+        /* Checkmark with avatar styling */
+        .checkmark-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+        .checkmark {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            color: white;
+            animation: checkmark-bounce 0.6s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .checkmark-ring {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            border: 6px solid var(--accent-green);
+            z-index: 1;
+            animation: checkmark-ring 2s ease-in-out infinite;
+        }
+
+        @keyframes checkmark-bounce {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes checkmark-ring {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(67, 181, 129, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 20px 8px rgba(67, 181, 129, 0.2);
+            }
         }
 
         h1 {
-            font-size: 32px;
-            margin: 20px 0;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #5dd39e 0%, var(--accent-green) 50%, var(--accent-green-hover) 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease infinite;
         }
 
-        p {
-            font-size: 18px;
-            opacity: 0.9;
-            margin: 10px 0;
+        @keyframes gradient-shift {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .status {
-            margin-top: 30px;
-            font-size: 14px;
-            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
         }
 
         .spinner {
-            display: inline-block;
             width: 16px;
             height: 16px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-top-color: white;
+            border: 2px solid rgba(67, 181, 129, 0.3);
+            border-top-color: var(--accent-green);
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
-            margin-right: 8px;
-            vertical-align: middle;
         }
 
         @keyframes spin {
@@ -80,45 +196,117 @@
         }
 
         .fallback {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            font-size: 14px;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            font-size: 0.875rem;
             display: none;
+            color: var(--text-secondary);
         }
 
         .fallback.show {
             display: block;
         }
 
+        .fallback p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
         .fallback-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: var(--accent-green);
             color: white;
-            word-break: break-all;
-            text-decoration: underline;
-            cursor: pointer;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(67, 181, 129, 0.3);
+        }
+
+        .fallback-link:hover {
+            background-color: var(--accent-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(67, 181, 129, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-box {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .checkmark {
+                width: 100px;
+                height: 100px;
+                font-size: 48px;
+            }
+
+            .checkmark-ring {
+                width: 112px;
+                height: 112px;
+                top: -5px;
+                left: -5px;
+                border: 5px solid var(--accent-green);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="checkmark">✓</div>
+    <!-- Video Background -->
+    <video class="video-background" id="bgVideo" muted playsinline>
+        <source src="../resources/axl.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+
+    <div class="content-box">
+        <div class="checkmark-container">
+            <div class="checkmark-ring"></div>
+            <div class="checkmark">✓</div>
+        </div>
+
         <h1>Authentication Successful!</h1>
-        <p>You've successfully connected your Discord account.</p>
+        <p class="subtitle">You've successfully connected your Discord account to Axl.</p>
+
         <div class="status" id="status">
             <span class="spinner"></span>
             <span>Opening Axl...</span>
         </div>
 
         <div class="fallback" id="fallback">
-            <p style="margin-bottom: 15px;">
-                If Axl didn't open automatically, click the link below:
-            </p>
-            <a class="fallback-link" id="fallback-link" href="#">Open Axl</a>
+            <p>If Axl didn't open automatically, click the button below:</p>
+            <a class="fallback-link" id="fallback-link" href="#">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                Open Axl
+            </a>
         </div>
     </div>
 
     <script>
+        // Video background - play after delay
+        const bgVideo = document.getElementById('bgVideo');
+        setTimeout(() => {
+            bgVideo.play();
+        }, 500);
+
         // Extract query parameters from the current URL
         const urlParams = new URLSearchParams(window.location.search);
         const queryString = window.location.search;
@@ -142,7 +330,7 @@
                 document.getElementById('status').style.display = 'none';
                 document.getElementById('fallback').classList.add('show');
             }, 2000);
-        }, 500);
+        }, 800);
 
         // Handle fallback link click
         fallbackLink.addEventListener('click', (e) => {
