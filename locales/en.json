@@ -203,6 +203,16 @@
       "lastUpdated": "Last updated: October 2025"
     }
   },
+  "callback": {
+    "meta": {
+      "title": "Authentication Successful - Axl"
+    },
+    "title": "Authentication Successful!",
+    "subtitle": "You've successfully connected your Discord account to Axl.",
+    "status": "Opening Axl...",
+    "fallbackText": "If Axl didn't open automatically, click the button below:",
+    "fallbackButton": "Open Axl"
+  },
   "terms": {
     "meta": {
       "title": "Terms of Service - Axl",

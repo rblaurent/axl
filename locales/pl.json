@@ -203,6 +203,16 @@
       "lastUpdated": "Ostatnia aktualizacja: Październik 2025"
     }
   },
+  "callback": {
+    "meta": {
+      "title": "Uwierzytelnienie Zakończone Sukcesem - Axl"
+    },
+    "title": "Uwierzytelnienie Zakończone Sukcesem!",
+    "subtitle": "Pomyślnie połączyłeś swoje konto Discord z Axl.",
+    "status": "Otwieranie Axl...",
+    "fallbackText": "Jeśli Axl nie otworzyło się automatycznie, kliknij przycisk poniżej:",
+    "fallbackButton": "Otwórz Axl"
+  },
   "terms": {
     "meta": {
       "title": "Warunki użytkowania - Axl",

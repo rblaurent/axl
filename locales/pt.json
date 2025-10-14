@@ -203,6 +203,16 @@
       "lastUpdated": "Última atualização: Outubro de 2025"
     }
   },
+  "callback": {
+    "meta": {
+      "title": "Autenticação Bem-Sucedida - Axl"
+    },
+    "title": "Autenticação Bem-Sucedida!",
+    "subtitle": "Você conectou com sucesso sua conta do Discord à Axl.",
+    "status": "Abrindo Axl...",
+    "fallbackText": "Se a Axl não abriu automaticamente, clique no botão abaixo:",
+    "fallbackButton": "Abrir Axl"
+  },
   "terms": {
     "meta": {
       "title": "Termos de Serviço - Axl",

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication Successful - Axl</title>
+    <title data-i18n="callback.meta.title">Authentication Successful - Axl</title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
@@ -235,6 +235,24 @@
             box-shadow: 0 6px 30px rgba(67, 181, 129, 0.4);
         }
 
+        /* Footer */
+        .footer-content {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-text {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .footer-icon {
+            opacity: 0.8;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .content-box {
@@ -279,27 +297,57 @@
             <div class="checkmark">✓</div>
         </div>
 
-        <h1>Authentication Successful!</h1>
-        <p class="subtitle">You've successfully connected your Discord account to Axl.</p>
+        <h1 data-i18n="callback.title">Authentication Successful!</h1>
+        <p class="subtitle" data-i18n="callback.subtitle">You've successfully connected your Discord account to Axl.</p>
 
         <div class="status" id="status">
             <span class="spinner"></span>
-            <span>Opening Axl...</span>
+            <span data-i18n="callback.status">Opening Axl...</span>
         </div>
 
         <div class="fallback" id="fallback">
-            <p>If Axl didn't open automatically, click the button below:</p>
+            <p data-i18n="callback.fallbackText">If Axl didn't open automatically, click the button below:</p>
             <a class="fallback-link" id="fallback-link" href="#">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-                Open Axl
+                <span data-i18n="callback.fallbackButton">Open Axl</span>
             </a>
+        </div>
+
+        <div class="footer-content">
+            <p class="footer-text"><span data-i18n="footer.madeWith">Made with love</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span data-i18n="footer.madeWithAnd">and coffee</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></p>
+            <p class="footer-text" data-i18n="footer.disclaimer">Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.</p>
+            <p class="footer-text">
+                <a href="../privacy.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.privacy">Privacy & Transparency</a>
+                <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                <a href="../terms.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.terms">Terms of Service</a>
+                <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                <a href="../about.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.about">Who is Axl?</a>
+                <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                <span class="language-switcher">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 4px;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <select id="languageSwitcher" style="background: transparent; border: none; color: var(--accent-green); font-weight: 500; cursor: pointer; font-family: inherit; font-size: inherit;">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                        <option value="pt">Português</option>
+                        <option value="pl">Polski</option>
+                    </select>
+                </span>
+            </p>
         </div>
     </div>
 
+    <script src="../i18n.js"></script>
     <script>
         // Video background - play after delay
         const bgVideo = document.getElementById('bgVideo');

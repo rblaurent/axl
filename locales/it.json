@@ -203,6 +203,16 @@
       "lastUpdated": "Ultimo aggiornamento: Ottobre 2025"
     }
   },
+  "callback": {
+    "meta": {
+      "title": "Autenticazione Riuscita - Axl"
+    },
+    "title": "Autenticazione Riuscita!",
+    "subtitle": "Hai connesso con successo il tuo account Discord ad Axl.",
+    "status": "Apertura di Axl...",
+    "fallbackText": "Se Axl non si è aperto automaticamente, clicca il pulsante qui sotto:",
+    "fallbackButton": "Apri Axl"
+  },
   "terms": {
     "meta": {
       "title": "Termini di Servizio - Axl",
