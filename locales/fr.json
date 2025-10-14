@@ -31,7 +31,8 @@
     "disclaimer": "Axl utilise l'IA pour discuter et traîner dans vos canaux vocaux Discord, ainsi que des photos de profil générées par IA.",
     "privacy": "Confidentialité & Transparence",
     "terms": "Conditions d'utilisation",
-    "about": "Qui est Axl ?"
+    "about": "Qui est Axl ?",
+    "howto": "Guide d'utilisation"
   },
   "about": {
     "meta": {
@@ -264,6 +265,147 @@
     },
     "footer": {
       "lastUpdated": "Dernière mise à jour : Octobre 2025"
+    }
+  },
+  "howto": {
+    "meta": {
+      "title": "Guide d'utilisation d'Axl - Axl",
+      "description": "Apprenez à configurer et utiliser Axl, votre compagnon gaming IA pour Discord."
+    },
+    "header": {
+      "title": "Guide d'utilisation d'Axl",
+      "intro": "Alors vous voulez qu'Axl tacle (ou encourage) votre gameplay ? Excellent choix ! Configurons tout ça. T'inquiète, c'est plus simple que ça en a l'air."
+    },
+    "gettingStarted": {
+      "title": "Premiers pas",
+      "intro": "Commençons par le commencement - installons Axl sur votre ordinateur.",
+      "step1": "<span class=\"highlight\">Téléchargez l'installateur</span> depuis la page d'accueil ou les releases GitHub",
+      "step2": "<span class=\"highlight\">Lancez AxlSetup.exe</span> (Windows peut afficher un avertissement SmartScreen - cliquez simplement sur \"Plus d'infos\" puis \"Exécuter quand même\")",
+      "step3": "<span class=\"highlight\">Lancez Axl</span> depuis votre bureau et passons ensemble l'assistant de configuration",
+      "autoUpdate": "Astuce pro : Une fois installé, Axl se met à jour automatiquement. Vous n'aurez jamais à télécharger manuellement les mises à jour !"
+    },
+    "setup": {
+      "title": "Configuration initiale",
+      "intro": "Quand vous lancez Axl pour la première fois, vous passerez par un assistant de configuration. Voici ce dont vous avez besoin :",
+      "claude": {
+        "title": "1. Clé API Claude",
+        "intro": "Axl utilise Claude AI pour comprendre votre gameplay. Rendez-vous sur <a href=\"https://console.anthropic.com/\" target=\"_blank\" style=\"color: var(--accent-green);\">Anthropic Console</a> et :",
+        "step1": "Inscrivez-vous ou connectez-vous",
+        "step2": "Allez dans API Keys et créez une nouvelle clé",
+        "step3": "Copiez-la et collez-la dans Axl",
+        "cost": "<span class=\"highlight\">Coût :</span> Environ 0,09 $ par heure de gameplay. Vous obtenez 5 $ de crédit gratuit à l'inscription !"
+      },
+      "elevenlabs": {
+        "title": "2. Voix ElevenLabs",
+        "intro": "C'est ce qui fait qu'Axl parle comme une vraie personne. Allez sur <a href=\"https://elevenlabs.io/\" target=\"_blank\" style=\"color: var(--accent-green);\">ElevenLabs</a> et :",
+        "step1": "Inscrivez-vous (ils ont un forfait gratuit !)",
+        "step2": "Allez dans Profile Settings et copiez votre clé API",
+        "step3": "Parcourez la Voice Library, choisissez une voix que vous aimez, et copiez le Voice ID",
+        "cost": "<span class=\"highlight\">Coût :</span> Environ 0,06 $ par heure, ou utilisez le forfait gratuit (10 000 caractères/mois = 3-5 heures de gaming)"
+      },
+      "discord": {
+        "title": "3. Configuration Discord",
+        "intro": "C'est la partie la plus délicate, mais vous allez y arriver ! On doit créer un bot Discord et obtenir quelques IDs.",
+        "botTitle": "Créer le bot :",
+        "bot1": "Allez sur <a href=\"https://discord.com/developers/applications\" target=\"_blank\" style=\"color: var(--accent-green);\">Discord Developer Portal</a>",
+        "bot2": "Cliquez sur \"New Application\" et donnez-lui un nom",
+        "bot3": "Allez dans la section Bot et cliquez sur \"Add Bot\"",
+        "bot4": "Copiez le token du bot (ça va dans Axl)",
+        "inviteTitle": "Inviter le bot sur votre serveur :",
+        "invite1": "Allez dans OAuth2 → URL Generator",
+        "invite2": "Cochez \"bot\" sous Scopes",
+        "invite3": "Cochez \"Connect\" et \"Speak\" sous Bot Permissions",
+        "invite4": "Copiez l'URL générée et ouvrez-la dans votre navigateur pour inviter le bot",
+        "idsTitle": "Obtenir vos IDs de Serveur et Canal :",
+        "ids1": "Dans Discord, allez dans Paramètres → Avancés et activez \"Mode développeur\"",
+        "ids2": "Clic droit sur le nom de votre serveur et sélectionnez \"Copier l'ID du serveur\"",
+        "ids3": "Clic droit sur votre canal vocal et sélectionnez \"Copier l'ID du salon\""
+      },
+      "personality": {
+        "title": "4. Choisissez la personnalité d'Axl",
+        "intro": "C'est la partie fun ! Choisissez comment Axl vous parle :",
+        "roaster": "<span class=\"highlight\">Tacleur sarcastique</span> - Trash talk gaming classique et moquerie amicale",
+        "hype": "<span class=\"highlight\">Cheerleader wholesome</span> - Que des vibes positives et encouragement",
+        "custom": "<span class=\"highlight\">Personnalisé</span> - Écrivez votre propre description de personnalité"
+      },
+      "hotkey": {
+        "title": "5. Configurez votre raccourci",
+        "intro": "Choisissez une touche pour des captures d'écran instantanées quand quelque chose d'incroyable (ou de terrible) arrive. Par défaut c'est F8, mais vous pouvez la changer comme vous voulez."
+      }
+    },
+    "using": {
+      "title": "Utiliser Axl",
+      "intro": "Bon, tout est configuré ! Voici comment utiliser Axl concrètement :",
+      "step1": "<span class=\"highlight\">Lancez Axl</span> depuis votre bureau",
+      "step2": "<span class=\"highlight\">Rejoignez votre canal vocal Discord</span> (Axl se connectera automatiquement)",
+      "step3": "<span class=\"highlight\">Commencez à jouer</span> - Axl capturera votre écran chaque minute et commentera quand quelque chose d'intéressant se passe",
+      "step4": "<span class=\"highlight\">Appuyez sur votre raccourci</span> (F8 par défaut) quand quelque chose d'épique arrive pour un commentaire instantané",
+      "step5": "<span class=\"highlight\">Vérifiez l'onglet Console</span> dans Axl pour voir ce qu'elle pense",
+      "tipsTitle": "Astuces pour de meilleurs résultats",
+      "tip1": "Assurez-vous d'être dans le canal vocal avant de démarrer Axl",
+      "tip2": "Le mode fenêtré ou fenêtré sans bordure fonctionne mieux pour les captures d'écran",
+      "tip3": "Choisissez une personnalité qui correspond à votre vibe et votre style de jeu",
+      "tip4": "Axl décide quand commenter - elle ne spammera pas pendant les moments ennuyeux",
+      "tip5": "Plus elle a de contexte, meilleurs sont ses commentaires"
+    },
+    "customization": {
+      "title": "Personnalisation",
+      "intro": "Vous voulez affiner le comportement d'Axl ? Vous pouvez changer presque tout :",
+      "personality": {
+        "title": "Onglet Personnalité",
+        "intro": "Changez la personnalité d'Axl à tout moment sans redémarrer. Basculez entre les préréglages ou écrivez votre propre description de personnalité personnalisée."
+      },
+      "settings": {
+        "title": "Onglet Paramètres",
+        "interval": "<span class=\"highlight\">Intervalle de capture</span> - Fréquence de capture automatique (par défaut : 60 secondes)",
+        "hotkey": "<span class=\"highlight\">Raccourci</span> - Changez la touche de capture instantanée",
+        "context": "<span class=\"highlight\">Taille du contexte</span> - Combien d'historique de conversation Axl se souvient",
+        "language": "<span class=\"highlight\">Langue</span> - Quelle langue Axl parle"
+      }
+    },
+    "troubleshooting": {
+      "title": "Dépannage",
+      "intro": "Vous rencontrez des problèmes ? Voici les problèmes les plus courants et leurs solutions :",
+      "voice": {
+        "title": "Axl ne rejoint pas le canal vocal",
+        "fix1": "Assurez-vous que le bot est invité sur votre serveur",
+        "fix2": "Vérifiez bien que votre ID de serveur et ID de canal sont corrects",
+        "fix3": "Vérifiez que le bot a les permissions \"Connect\" et \"Speak\""
+      },
+      "audio": {
+        "title": "Pas d'audio qui se joue",
+        "fix1": "Rejoignez d'abord le canal vocal vous-même, puis démarrez Axl",
+        "fix2": "Vérifiez qu'Axl apparaît comme connecté dans l'interface",
+        "fix3": "Cherchez des erreurs dans l'onglet Console"
+      },
+      "screenshots": {
+        "title": "Les captures d'écran échouent",
+        "fix1": "Essayez de lancer Axl en tant qu'administrateur",
+        "fix2": "Vérifiez les permissions de capture d'écran Windows",
+        "fix3": "Assurez-vous que l'antivirus ne bloque pas la capture d'écran"
+      },
+      "api": {
+        "title": "Erreurs \"API Key Invalid\"",
+        "fix1": "Vérifiez bien que vous avez copié la clé complète sans espaces supplémentaires",
+        "fix2": "Vérifiez qu'il vous reste des crédits dans votre compte API",
+        "fix3": "Pour les problèmes de token Discord, essayez de le régénérer"
+      }
+    },
+    "cost": {
+      "title": "Combien ça coûte ?",
+      "intro": "Soyons honnêtes - les services IA coûtent de l'argent. Mais c'est plutôt raisonnable !",
+      "typical": "<span class=\"highlight\">Session de jeu typique d'1 heure :</span> Environ 0,15 $ au total (Claude : 0,09 $ + ElevenLabs : 0,06 $)",
+      "freeTitle": "Forfaits gratuits pour démarrer :",
+      "free1": "• Anthropic : 5 $ de crédit gratuit à l'inscription",
+      "free2": "• ElevenLabs : 10 000 caractères/mois gratuits (couvre 3-5 heures de gaming)",
+      "free3": "• Discord : Complètement gratuit, toujours",
+      "conclusion": "Donc vous pouvez essayer Axl gratuitement, et si vous l'adorez, les coûts sont à peu près les mêmes qu'un café fancy par 6-7 heures de gaming !"
+    },
+    "ready": {
+      "title": "Prêt à jouer !",
+      "paragraph1": "Et voilà ! Vous êtes prêt à avoir Axl qui tacle (ou encourage) votre gameplay. Rappelez-vous, c'est fait pour être fun - ne le prenez pas trop au sérieux !",
+      "paragraph2": "Si vous rencontrez des problèmes qui ne sont pas couverts ici, consultez l'onglet Console dans Axl pour les messages d'erreur, ou n'hésitez pas à demander de l'aide.",
+      "paragraph3": "Maintenant allez jouer, et laissez Axl apporter les commentaires. Amusez-vous bien !"
     }
   }
 }

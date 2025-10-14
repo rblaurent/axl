@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="howto.meta.title">How to Use Axl - Axl</title>
+    <meta name="description" content="Learn how to set up and use Axl, your AI gaming companion for Discord." data-i18n-meta="howto.meta.description">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCZQG816WQ');
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="resources/android-chrome-512x512.png">
+    <link rel="manifest" href="resources/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Sansation:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* How-to page specific styles */
+        .howto-page {
+            padding: 4rem 0;
+            min-height: 100vh;
+        }
+
+        .howto-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .howto-content {
+            background: var(--bg-dark);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .howto-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .howto-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #5dd39e 0%, var(--accent-green) 50%, var(--accent-green-hover) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .howto-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .howto-section {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-icon {
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .section-subtitle {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .section-text {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-box:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-box-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box-text {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: var(--accent-green);
+            color: var(--bg-dark);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .check-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .check-icon {
+            color: var(--accent-green);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .emphasis-box {
+            background: rgba(67, 181, 129, 0.1);
+            border-left: 4px solid var(--accent-green);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .emphasis-text {
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-green-hover);
+            transform: translateX(-5px);
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(181, 186, 193, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .howto-content {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+
+            .howto-page {
+                padding: 2rem 0;
+            }
+
+            .howto-container {
+                padding: 0 1rem;
+            }
+
+            .howto-title {
+                font-size: 2rem;
+            }
+
+            .howto-intro {
+                font-size: 1rem;
+            }
+
+            .howto-section {
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="howto-page">
+        <div class="howto-container">
+            <div class="howto-content">
+                <a href="index.html" class="back-link">
+                    <span>←</span>
+                    <span data-i18n="common.backToHome">Back to Home</span>
+                </a>
+
+                <!-- Header -->
+                <div class="howto-header">
+                    <h1 class="howto-title" data-i18n="howto.header.title">How to Use Axl</h1>
+                    <div class="howto-intro">
+                        <p data-i18n="howto.header.intro">So you want to get Axl roasting (or hyping) your gameplay? Great choice! Let's get you set up. Don't worry, it's easier than it looks.</p>
+                    </div>
+                </div>
+
+                <!-- Getting Started -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.gettingStarted.title">Getting Started</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.gettingStarted.intro">
+                        First things first - let's get Axl on your computer.
+                    </p>
+
+                    <div class="info-box">
+                        <ul class="step-list">
+                            <li class="step-item">
+                                <span class="step-number">1</span>
+                                <span data-i18n-html="howto.gettingStarted.step1"><span class="highlight">Download the installer</span> from the homepage or GitHub releases</span>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">2</span>
+                                <span data-i18n-html="howto.gettingStarted.step2"><span class="highlight">Run AxlSetup.exe</span> (Windows might show a SmartScreen warning - just click "More info" then "Run anyway")</span>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">3</span>
+                                <span data-i18n-html="howto.gettingStarted.step3"><span class="highlight">Launch Axl</span> from your desktop and let's get through the setup wizard together</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="emphasis-box">
+                        <p class="emphasis-text" data-i18n="howto.gettingStarted.autoUpdate">
+                            Pro tip: Once installed, Axl auto-updates itself. You'll never have to manually download updates!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- First Time Setup -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M12 1v6m0 6v6m5.196-14.196l-4.243 4.243m0 5.656l4.243 4.243M23 12h-6m-6 0H1m14.196 5.196l-4.243-4.243m0-5.656l4.243-4.243"></path>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.setup.title">First Time Setup</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.setup.intro">
+                        When you launch Axl for the first time, you'll go through a setup wizard. Here's what you need to get ready:
+                    </p>
+
+                    <!-- Claude API -->
+                    <h3 class="section-subtitle" data-i18n="howto.setup.claude.title">1. Claude API Key</h3>
+                    <p class="section-text" data-i18n-html="howto.setup.claude.intro">
+                        Axl uses Claude AI to understand your gameplay. Head to <a href="https://console.anthropic.com/" target="_blank" style="color: var(--accent-green);">Anthropic Console</a> and:
+                    </p>
+                    <div class="info-box">
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.claude.step1">Sign up or log in</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.claude.step2">Go to API Keys and create a new key</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.claude.step3">Copy and paste it into Axl</span>
+                            </li>
+                        </ul>
+                        <p class="info-box-text" style="margin-top: 1rem;" data-i18n="howto.setup.claude.cost">
+                            <span class="highlight">Cost:</span> About $0.09 per hour of gameplay. You get $5 free credit when you sign up!
+                        </p>
+                    </div>
+
+                    <!-- ElevenLabs -->
+                    <h3 class="section-subtitle" data-i18n="howto.setup.elevenlabs.title">2. ElevenLabs Voice</h3>
+                    <p class="section-text" data-i18n-html="howto.setup.elevenlabs.intro">
+                        This is what makes Axl sound like an actual person. Go to <a href="https://elevenlabs.io/" target="_blank" style="color: var(--accent-green);">ElevenLabs</a> and:
+                    </p>
+                    <div class="info-box">
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.elevenlabs.step1">Sign up (they have a free tier!)</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.elevenlabs.step2">Go to Profile Settings and copy your API key</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.elevenlabs.step3">Browse the Voice Library, pick a voice you like, and copy the Voice ID</span>
+                            </li>
+                        </ul>
+                        <p class="info-box-text" style="margin-top: 1rem;" data-i18n="howto.setup.elevenlabs.cost">
+                            <span class="highlight">Cost:</span> About $0.06 per hour, or use the free tier (10,000 characters/month = 3-5 hours of gaming)
+                        </p>
+                    </div>
+
+                    <!-- Discord -->
+                    <h3 class="section-subtitle" data-i18n="howto.setup.discord.title">3. Discord Setup</h3>
+                    <p class="section-text" data-i18n="howto.setup.discord.intro">
+                        This is the trickiest part, but you got this! We need to create a Discord bot and get some IDs.
+                    </p>
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.setup.discord.botTitle">Create the bot:</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.setup.discord.bot1">Go to <a href="https://discord.com/developers/applications" target="_blank" style="color: var(--accent-green);">Discord Developer Portal</a></span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.bot2">Click "New Application" and give it a name</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.bot3">Go to the Bot section and click "Add Bot"</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.bot4">Copy the bot token (this goes into Axl)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.setup.discord.inviteTitle">Invite the bot to your server:</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.invite1">Go to OAuth2 → URL Generator</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.invite2">Check "bot" under Scopes</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.invite3">Check "Connect" and "Speak" under Bot Permissions</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.invite4">Copy the generated URL and open it in your browser to invite the bot</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.setup.discord.idsTitle">Get your Server and Channel IDs:</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.ids1">In Discord, go to Settings → Advanced and enable "Developer Mode"</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.ids2">Right-click your server name and select "Copy Server ID"</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.setup.discord.ids3">Right-click your voice channel and select "Copy Channel ID"</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Personality -->
+                    <h3 class="section-subtitle" data-i18n="howto.setup.personality.title">4. Pick Axl's Personality</h3>
+                    <p class="section-text" data-i18n="howto.setup.personality.intro">
+                        This is the fun part! Choose how Axl talks to you:
+                    </p>
+                    <div class="info-box">
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.setup.personality.roaster"><span class="highlight">Sarcastic roaster</span> - Classic gaming trash talk and friendly mockery</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.setup.personality.hype"><span class="highlight">Wholesome hype person</span> - All positive vibes and encouragement</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.setup.personality.custom"><span class="highlight">Custom</span> - Write your own personality description</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Hotkey -->
+                    <h3 class="section-subtitle" data-i18n="howto.setup.hotkey.title">5. Set Your Hotkey</h3>
+                    <p class="section-text" data-i18n="howto.setup.hotkey.intro">
+                        Pick a key for instant screenshots when something amazing (or terrible) happens. Default is F8, but you can change it to whatever you like.
+                    </p>
+                </div>
+
+                <!-- Using Axl -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.using.title">Using Axl</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.using.intro">
+                        Alright, you're all set up! Here's how to actually use Axl:
+                    </p>
+
+                    <div class="info-box">
+                        <ul class="step-list">
+                            <li class="step-item">
+                                <span class="step-number">1</span>
+                                <span data-i18n-html="howto.using.step1"><span class="highlight">Launch Axl</span> from your desktop</span>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">2</span>
+                                <span data-i18n-html="howto.using.step2"><span class="highlight">Join your Discord voice channel</span> (Axl will connect automatically)</span>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">3</span>
+                                <span data-i18n-html="howto.using.step3"><span class="highlight">Start gaming</span> - Axl will capture your screen every minute and comment when something interesting happens</span>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">4</span>
+                                <span data-i18n-html="howto.using.step4"><span class="highlight">Hit your hotkey</span> (default F8) when something epic happens for instant commentary</span>
+                            </li>
+                            <li class="step-item">
+                                <span class="step-number">5</span>
+                                <span data-i18n-html="howto.using.step5"><span class="highlight">Check the Console tab</span> in Axl to see what she's thinking</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3 class="section-subtitle" data-i18n="howto.using.tipsTitle">Tips for Best Results</h3>
+                    <div class="info-box">
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span data-i18n="howto.using.tip1">Make sure you're in the voice channel before starting Axl</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span data-i18n="howto.using.tip2">Windowed or borderless windowed mode works best for screen captures</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span data-i18n="howto.using.tip3">Choose a personality that matches your vibe and gaming style</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span data-i18n="howto.using.tip4">Axl decides when to comment - she won't spam during boring moments</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">✓</span>
+                                <span data-i18n="howto.using.tip5">The more context she has, the better her commentary gets</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Customization -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.customization.title">Customization</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.customization.intro">
+                        Want to fine-tune Axl's behavior? You can change almost everything:
+                    </p>
+
+                    <h3 class="section-subtitle" data-i18n="howto.customization.personality.title">Personality Tab</h3>
+                    <p class="section-text" data-i18n="howto.customization.personality.intro">
+                        Change Axl's personality anytime without restarting. Switch between presets or write your own custom personality description.
+                    </p>
+
+                    <h3 class="section-subtitle" data-i18n="howto.customization.settings.title">Settings Tab</h3>
+                    <div class="info-box">
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.customization.settings.interval"><span class="highlight">Capture interval</span> - How often to auto-capture (default: 60 seconds)</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.customization.settings.hotkey"><span class="highlight">Hotkey</span> - Change the instant capture key</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.customization.settings.context"><span class="highlight">Context size</span> - How much conversation history Axl remembers</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n-html="howto.customization.settings.language"><span class="highlight">Language</span> - What language Axl speaks</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Troubleshooting -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.troubleshooting.title">Troubleshooting</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.troubleshooting.intro">
+                        Running into issues? Here are the most common problems and fixes:
+                    </p>
+
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.troubleshooting.voice.title">Axl won't join voice channel</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.voice.fix1">Make sure the bot is invited to your server</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.voice.fix2">Double-check your Server ID and Channel ID are correct</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.voice.fix3">Verify the bot has "Connect" and "Speak" permissions</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.troubleshooting.audio.title">No audio playing</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.audio.fix1">Join the voice channel yourself first, then start Axl</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.audio.fix2">Check that Axl shows as connected in the UI</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.audio.fix3">Look for errors in the Console tab</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.troubleshooting.screenshots.title">Screenshots failing</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.screenshots.fix1">Try running Axl as administrator</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.screenshots.fix2">Check Windows screen capture permissions</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.screenshots.fix3">Make sure antivirus isn't blocking screen capture</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.troubleshooting.api.title">"API Key Invalid" errors</div>
+                        <ul class="check-list">
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.api.fix1">Double-check you copied the full key with no extra spaces</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.api.fix2">Verify you have credits remaining in your API account</span>
+                            </li>
+                            <li class="check-item">
+                                <span class="check-icon">•</span>
+                                <span data-i18n="howto.troubleshooting.api.fix3">For Discord token issues, try regenerating it</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cost Info -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.cost.title">What Does It Cost?</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.cost.intro">
+                        Let's be real - AI services cost money. But it's pretty reasonable!
+                    </p>
+
+                    <div class="emphasis-box">
+                        <p class="emphasis-text" data-i18n="howto.cost.typical">
+                            <span class="highlight">Typical 1-hour gaming session:</span> About $0.15 total (Claude: $0.09 + ElevenLabs: $0.06)
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-box-title" data-i18n="howto.cost.freeTitle">Free tiers to get you started:</div>
+                        <p class="info-box-text" data-i18n="howto.cost.free1">
+                            • Anthropic: $5 free credit when you sign up
+                        </p>
+                        <p class="info-box-text" data-i18n="howto.cost.free2">
+                            • ElevenLabs: 10,000 characters/month free (covers 3-5 hours of gaming)
+                        </p>
+                        <p class="info-box-text" data-i18n="howto.cost.free3">
+                            • Discord: Completely free, always
+                        </p>
+                    </div>
+
+                    <p class="section-text" data-i18n="howto.cost.conclusion">
+                        So you can try Axl for free, and if you love it, the costs are about the same as a fancy coffee per 6-7 hours of gaming!
+                    </p>
+                </div>
+
+                <!-- Bottom Line -->
+                <div class="howto-section">
+                    <div class="section-header">
+                        <svg class="section-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                        <h2 class="section-title" data-i18n="howto.ready.title">Ready to Roll!</h2>
+                    </div>
+                    <p class="section-text" data-i18n="howto.ready.paragraph1">
+                        That's it! You're all set to have Axl roasting (or hyping) your gameplay. Remember, she's meant to be fun - don't take her too seriously!
+                    </p>
+                    <p class="section-text" data-i18n="howto.ready.paragraph2">
+                        If you run into any issues not covered here, check out the Console tab in Axl for error messages, or feel free to reach out for help.
+                    </p>
+                    <p class="section-text" data-i18n="howto.ready.paragraph3">
+                        Now go game, and let Axl bring the commentary. Have fun out there!
+                    </p>
+                </div>
+
+                <div class="footer-note">
+                    <span data-i18n="footer.madeWith">Made with love</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span data-i18n="footer.madeWithAnd">and coffee</span> <svg class="footer-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg><br>
+                    <span data-i18n="footer.disclaimer">Axl uses AI to chat and hang out in your Discord voice channels, and AI-generated profile pictures too.</span><br>
+                    <a href="privacy.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.privacy">Privacy & Transparency</a>
+                    <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                    <a href="terms.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.terms">Terms of Service</a>
+                    <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                    <a href="about.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.about">Who is Axl?</a>
+                    <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                    <a href="howto.html" style="color: var(--accent-green); text-decoration: none; font-weight: 500;" data-i18n="footer.howto">How to Use</a>
+                    <span style="color: var(--text-muted); margin: 0 0.5rem;">•</span>
+                    <span class="language-switcher">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 4px;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <select id="languageSwitcher" style="background: transparent; border: none; color: var(--accent-green); font-weight: 500; cursor: pointer; font-family: inherit; font-size: inherit;">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt">Português</option>
+                            <option value="pl">Polski</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="i18n.js"></script>
+</body>
+</html>

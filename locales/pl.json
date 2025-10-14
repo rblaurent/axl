@@ -31,7 +31,8 @@
     "disclaimer": "Axl używa AI do rozmowy i przebywania w Twoich kanałach głosowych Discord, a także zdjęć profilowych generowanych przez AI.",
     "privacy": "Prywatność i przejrzystość",
     "terms": "Warunki użytkowania",
-    "about": "Kim jest Axl?"
+    "about": "Kim jest Axl?",
+    "howto": "Jak używać"
   },
   "about": {
     "meta": {
@@ -264,6 +265,147 @@
     },
     "footer": {
       "lastUpdated": "Ostatnia aktualizacja: Październik 2025"
+    }
+  },
+  "howto": {
+    "meta": {
+      "title": "Jak używać Axl - Axl",
+      "description": "Dowiedz się, jak skonfigurować i używać Axl, Twojego towarzysza gamingowego AI dla Discord."
+    },
+    "header": {
+      "title": "Jak używać Axl",
+      "intro": "Więc chcesz, żeby Axl dołował (albo dopingował) Twoją rozgrywkę? Świetny wybór! Zaraz Cię skonfigurujemy. Nie martw się, to prostsze niż wygląda."
+    },
+    "gettingStarted": {
+      "title": "Pierwsze kroki",
+      "intro": "Na początek - zainstalujmy Axl na Twoim komputerze.",
+      "step1": "<span class=\"highlight\">Pobierz instalator</span> ze strony głównej lub z wydań na GitHubie",
+      "step2": "<span class=\"highlight\">Uruchom AxlSetup.exe</span> (Windows może pokazać ostrzeżenie SmartScreen - po prostu kliknij \"Więcej informacji\", a następnie \"Uruchom mimo to\")",
+      "step3": "<span class=\"highlight\">Uruchom Axl</span> z pulpitu i przejdźmy razem przez kreatora konfiguracji",
+      "autoUpdate": "Pro tip: Po zainstalowaniu Axl aktualizuje się automatycznie. Nigdy nie będziesz musiał ręcznie pobierać aktualizacji!"
+    },
+    "setup": {
+      "title": "Pierwsza konfiguracja",
+      "intro": "Gdy uruchomisz Axl po raz pierwszy, przejdziesz przez kreatora konfiguracji. Oto co musisz przygotować:",
+      "claude": {
+        "title": "1. Klucz API Claude",
+        "intro": "Axl używa Claude AI do zrozumienia Twojej rozgrywki. Przejdź do <a href=\"https://console.anthropic.com/\" target=\"_blank\" style=\"color: var(--accent-green);\">Konsoli Anthropic</a> i:",
+        "step1": "Zarejestruj się lub zaloguj",
+        "step2": "Przejdź do Kluczy API i utwórz nowy klucz",
+        "step3": "Skopiuj i wklej go do Axl",
+        "cost": "<span class=\"highlight\">Koszt:</span> Około $0.09 za godzinę rozgrywki. Otrzymujesz $5 darmowego kredytu przy rejestracji!"
+      },
+      "elevenlabs": {
+        "title": "2. Głos ElevenLabs",
+        "intro": "To sprawia, że Axl brzmi jak prawdziwa osoba. Przejdź do <a href=\"https://elevenlabs.io/\" target=\"_blank\" style=\"color: var(--accent-green);\">ElevenLabs</a> i:",
+        "step1": "Zarejestruj się (mają darmowy plan!)",
+        "step2": "Przejdź do Ustawień profilu i skopiuj swój klucz API",
+        "step3": "Przeglądaj Bibliotekę głosów, wybierz głos, który Ci się podoba i skopiuj ID głosu",
+        "cost": "<span class=\"highlight\">Koszt:</span> Około $0.06 za godzinę, lub użyj darmowego planu (10 000 znaków/miesiąc = 3-5 godzin grania)"
+      },
+      "discord": {
+        "title": "3. Konfiguracja Discord",
+        "intro": "To najtrudniejsza część, ale dasz radę! Musimy stworzyć bota Discord i uzyskać kilka ID.",
+        "botTitle": "Utwórz bota:",
+        "bot1": "Przejdź do <a href=\"https://discord.com/developers/applications\" target=\"_blank\" style=\"color: var(--accent-green);\">Portalu deweloperów Discord</a>",
+        "bot2": "Kliknij \"New Application\" i nadaj mu nazwę",
+        "bot3": "Przejdź do sekcji Bot i kliknij \"Add Bot\"",
+        "bot4": "Skopiuj token bota (to wklej do Axl)",
+        "inviteTitle": "Zaproś bota na swój serwer:",
+        "invite1": "Przejdź do OAuth2 → URL Generator",
+        "invite2": "Zaznacz \"bot\" w Scopes",
+        "invite3": "Zaznacz \"Connect\" i \"Speak\" w Bot Permissions",
+        "invite4": "Skopiuj wygenerowany URL i otwórz go w przeglądarce, aby zaprosić bota",
+        "idsTitle": "Pobierz ID serwera i kanału:",
+        "ids1": "W Discord przejdź do Ustawienia → Zaawansowane i włącz \"Tryb dewelopera\"",
+        "ids2": "Kliknij prawym przyciskiem na nazwę swojego serwera i wybierz \"Skopiuj ID serwera\"",
+        "ids3": "Kliknij prawym przyciskiem na swój kanał głosowy i wybierz \"Skopiuj ID kanału\""
+      },
+      "personality": {
+        "title": "4. Wybierz osobowość Axl",
+        "intro": "To jest fajna część! Wybierz, jak Axl ma do Ciebie mówić:",
+        "roaster": "<span class=\"highlight\">Sarkastyczny krytyk</span> - Klasyczny gamingowy trash talk i przyjazne docinki",
+        "hype": "<span class=\"highlight\">Pozytywny motywator</span> - Wszystko pozytywne vibes i motywacja",
+        "custom": "<span class=\"highlight\">Niestandardowa</span> - Napisz własny opis osobowości"
+      },
+      "hotkey": {
+        "title": "5. Ustaw swój skrót klawiszowy",
+        "intro": "Wybierz klawisz do natychmiastowych zrzutów ekranu, gdy dzieje się coś niesamowitego (lub okropnego). Domyślnie to F8, ale możesz zmienić na dowolny."
+      }
+    },
+    "using": {
+      "title": "Używanie Axl",
+      "intro": "W porządku, wszystko skonfigurowane! Oto jak faktycznie używać Axl:",
+      "step1": "<span class=\"highlight\">Uruchom Axl</span> z pulpitu",
+      "step2": "<span class=\"highlight\">Dołącz do swojego kanału głosowego Discord</span> (Axl połączy się automatycznie)",
+      "step3": "<span class=\"highlight\">Zacznij grać</span> - Axl będzie przechwytywać Twój ekran co minutę i komentować, gdy coś ciekawego się wydarzy",
+      "step4": "<span class=\"highlight\">Naciśnij swój skrót</span> (domyślnie F8), gdy coś epickiego się wydarzy, aby uzyskać natychmiastowy komentarz",
+      "step5": "<span class=\"highlight\">Sprawdź zakładkę Konsola</span> w Axl, aby zobaczyć, co ona myśli",
+      "tipsTitle": "Wskazówki dla najlepszych rezultatów",
+      "tip1": "Upewnij się, że jesteś w kanale głosowym przed uruchomieniem Axl",
+      "tip2": "Tryb okienkowy lub okienkowy bez ramek działa najlepiej dla przechwytywania ekranu",
+      "tip3": "Wybierz osobowość, która pasuje do Twojego stylu i sposobu grania",
+      "tip4": "Axl decyduje, kiedy komentować - nie będzie spamować podczas nudnych momentów",
+      "tip5": "Im więcej kontekstu ma, tym lepszy jest jej komentarz"
+    },
+    "customization": {
+      "title": "Personalizacja",
+      "intro": "Chcesz dostroić zachowanie Axl? Możesz zmienić prawie wszystko:",
+      "personality": {
+        "title": "Zakładka Osobowość",
+        "intro": "Zmień osobowość Axl w dowolnym momencie bez ponownego uruchamiania. Przełączaj między presetami lub napisz własny niestandardowy opis osobowości."
+      },
+      "settings": {
+        "title": "Zakładka Ustawienia",
+        "interval": "<span class=\"highlight\">Interwał przechwytywania</span> - Jak często automatycznie przechwytywać (domyślnie: 60 sekund)",
+        "hotkey": "<span class=\"highlight\">Skrót klawiszowy</span> - Zmień klawisz natychmiastowego przechwytywania",
+        "context": "<span class=\"highlight\">Rozmiar kontekstu</span> - Ile historii rozmów Axl pamięta",
+        "language": "<span class=\"highlight\">Język</span> - W jakim języku Axl mówi"
+      }
+    },
+    "troubleshooting": {
+      "title": "Rozwiązywanie problemów",
+      "intro": "Masz problemy? Oto najczęstsze problemy i rozwiązania:",
+      "voice": {
+        "title": "Axl nie dołącza do kanału głosowego",
+        "fix1": "Upewnij się, że bot jest zaproszony na Twój serwer",
+        "fix2": "Sprawdź dokładnie, czy Twoje ID serwera i ID kanału są poprawne",
+        "fix3": "Zweryfikuj, czy bot ma uprawnienia \"Connect\" i \"Speak\""
+      },
+      "audio": {
+        "title": "Brak odtwarzanego audio",
+        "fix1": "Najpierw sam dołącz do kanału głosowego, a następnie uruchom Axl",
+        "fix2": "Sprawdź, czy Axl pokazuje się jako połączony w interfejsie",
+        "fix3": "Poszukaj błędów w zakładce Konsola"
+      },
+      "screenshots": {
+        "title": "Zrzuty ekranu nie działają",
+        "fix1": "Spróbuj uruchomić Axl jako administrator",
+        "fix2": "Sprawdź uprawnienia przechwytywania ekranu w Windows",
+        "fix3": "Upewnij się, że antywirus nie blokuje przechwytywania ekranu"
+      },
+      "api": {
+        "title": "Błędy \"Nieprawidłowy klucz API\"",
+        "fix1": "Sprawdź dokładnie, czy skopiowałeś cały klucz bez dodatkowych spacji",
+        "fix2": "Zweryfikuj, czy masz pozostałe kredyty na swoim koncie API",
+        "fix3": "W przypadku problemów z tokenem Discord spróbuj go wygenerować ponownie"
+      }
+    },
+    "cost": {
+      "title": "Ile to kosztuje?",
+      "intro": "Bądźmy szczerzy - usługi AI kosztują pieniądze. Ale to całkiem rozsądne!",
+      "typical": "<span class=\"highlight\">Typowa godzinna sesja gamingowa:</span> Około $0.15 łącznie (Claude: $0.09 + ElevenLabs: $0.06)",
+      "freeTitle": "Darmowe plany na początek:",
+      "free1": "• Anthropic: $5 darmowego kredytu przy rejestracji",
+      "free2": "• ElevenLabs: 10 000 znaków/miesiąc za darmo (pokrywa 3-5 godzin grania)",
+      "free3": "• Discord: Całkowicie darmowe, zawsze",
+      "conclusion": "Więc możesz wypróbować Axl za darmo, a jeśli Ci się spodoba, koszty są jak za fajną kawę za 6-7 godzin grania!"
+    },
+    "ready": {
+      "title": "Gotowy do działania!",
+      "paragraph1": "To wszystko! Jesteś gotowy, aby Axl dołował (lub dopingował) Twoją rozgrywkę. Pamiętaj, ma być zabawnie - nie traktuj tego zbyt poważnie!",
+      "paragraph2": "Jeśli napotkasz jakieś problemy, których tu nie omówiliśmy, sprawdź zakładkę Konsola w Axl w poszukiwaniu komunikatów o błędach lub śmiało poproś o pomoc.",
+      "paragraph3": "Teraz idź grać i pozwól Axl dodać komentarz. Baw się dobrze!"
     }
   }
 }
