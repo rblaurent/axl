@@ -240,11 +240,29 @@
             const deepLink = `axloverlay://${hostId}`;
             document.getElementById('deeplink').href = deepLink;
 
-            // Connect to relay to detect when overlay app joins
+            // Connect to relay first, then fire deep link once we're listening
             const relayUrl = `wss://axl-overlay-relay.becherel-laurent.workers.dev/ws?session=${hostId}&role=client`;
             let confirmed = false;
+            let deepLinkFired = false;
+
+            function fireDeepLink() {
+                if (deepLinkFired) return;
+                deepLinkFired = true;
+                window.location.href = deepLink;
+                // After 3 seconds, show the fallback download section if not confirmed
+                setTimeout(() => {
+                    if (!confirmed) {
+                        document.getElementById('fallback').classList.remove('hidden');
+                    }
+                }, 3000);
+            }
+
             try {
                 const ws = new WebSocket(relayUrl);
+                ws.onopen = () => {
+                    // WebSocket ready — now fire the deep link so we don't miss peerConnected
+                    fireDeepLink();
+                };
                 ws.onmessage = (e) => {
                     try {
                         const msg = JSON.parse(e.data);
@@ -260,21 +278,17 @@
                         }
                     } catch {}
                 };
-                // If relay connection fails or times out, no big deal — fallback still shows
-                ws.onerror = () => ws.close();
+                // If relay connection fails, fire deep link anyway as fallback
+                ws.onerror = () => { fireDeepLink(); ws.close(); };
                 // Close relay connection after 30s regardless
                 setTimeout(() => { if (!confirmed) ws.close(); }, 30000);
-            } catch {}
+            } catch {
+                // WebSocket failed entirely — still fire the deep link
+                fireDeepLink();
+            }
 
-            // Try to open the deep link automatically
-            window.location.href = deepLink;
-
-            // After 3 seconds, show the fallback download section if not confirmed
-            setTimeout(() => {
-                if (!confirmed) {
-                    document.getElementById('fallback').classList.remove('hidden');
-                }
-            }, 3000);
+            // Safety net: fire deep link after 2s even if WebSocket hasn't connected
+            setTimeout(fireDeepLink, 2000);
         } else {
             document.getElementById('connecting').innerHTML =
                 '<p>Invalid or missing host ID.</p>' +
