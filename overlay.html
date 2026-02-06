@@ -204,6 +204,21 @@
                     </div>
                 </div>
 
+                <div id="fallback" class="overlay-status hidden">
+                    <p>Don't have Axl yet?</p>
+                    <p class="hint">Install Axl, then click the overlay link from Discord again.</p>
+                    <div class="overlay-actions">
+                        <a href="https://github.com/rblaurent/axl/releases/latest/download/AxlSetup.exe" class="btn-secondary">
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download Axl for Windows</span>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="overlay-footer">
                     <p><a href="index.html">Back to Axl</a></p>
                 </div>
@@ -225,15 +240,41 @@
             const deepLink = `axloverlay://${hostId}`;
             document.getElementById('deeplink').href = deepLink;
 
+            // Connect to relay to detect when overlay app joins
+            const relayUrl = `wss://axl-overlay-relay.becherel-laurent.workers.dev/ws?session=${hostId}&role=client`;
+            let confirmed = false;
+            try {
+                const ws = new WebSocket(relayUrl);
+                ws.onmessage = (e) => {
+                    try {
+                        const msg = JSON.parse(e.data);
+                        if (msg.type === 'peerConnected' && !confirmed) {
+                            confirmed = true;
+                            ws.close();
+                            const status = document.getElementById('connecting');
+                            status.innerHTML =
+                                '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5" style="margin:0 auto 1rem;display:block"><path d="M20 6L9 17l-5-5"/></svg>' +
+                                '<p style="color:var(--accent-green);font-weight:600;">Overlay connected!</p>' +
+                                '<p class="hint">You can close this tab.</p>';
+                            status.classList.remove('connecting');
+                        }
+                    } catch {}
+                };
+                // If relay connection fails or times out, no big deal — fallback still shows
+                ws.onerror = () => ws.close();
+                // Close relay connection after 30s regardless
+                setTimeout(() => { if (!confirmed) ws.close(); }, 30000);
+            } catch {}
+
             // Try to open the deep link automatically
             window.location.href = deepLink;
 
-            // Show success state immediately — the page's job is done once the deep link fires
-            const status = document.getElementById('connecting');
-            status.innerHTML =
-                '<p style="font-size:1.25rem;color:var(--accent-green);font-weight:600;">Overlay link sent!</p>' +
-                '<p class="hint">You can close this tab. If the overlay didn\'t open, make sure <a href="https://github.com/rblaurent/axl/releases/latest/download/AxlSetup.exe" style="color:var(--accent-green)">Axl is installed</a>.</p>';
-            status.classList.remove('connecting');
+            // After 3 seconds, show the fallback download section if not confirmed
+            setTimeout(() => {
+                if (!confirmed) {
+                    document.getElementById('fallback').classList.remove('hidden');
+                }
+            }, 3000);
         } else {
             document.getElementById('connecting').innerHTML =
                 '<p>Invalid or missing host ID.</p>' +
