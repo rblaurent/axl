@@ -158,6 +158,21 @@
             color: var(--accent-green-hover);
         }
 
+        .guild-info {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .guild-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         @media (max-width: 768px) {
             .overlay-content {
                 padding: 2rem 1.5rem;
@@ -184,8 +199,9 @@
     <section class="overlay-page">
         <div class="overlay-container">
             <div class="overlay-content">
-                <img src="resources/axl.png" alt="Axl" class="overlay-avatar" onerror="this.style.display='none'">
-                <h1 class="overlay-title">Axl Overlay</h1>
+                <img id="companionAvatar" src="resources/axl.png" alt="Axl" class="overlay-avatar" onerror="this.style.display='none'">
+                <h1 id="companionTitle" class="overlay-title">Axl Overlay</h1>
+                <p id="guildInfo" class="overlay-subtitle" style="display:none"></p>
                 <p class="overlay-subtitle">See what your AI companion is thinking and saying</p>
 
                 <div id="connecting" class="overlay-status connecting">
@@ -257,6 +273,27 @@
                 }, 3000);
             }
 
+            function updateCompanionInfo(msg) {
+                if (msg.companionName) {
+                    document.getElementById('companionTitle').textContent = msg.companionName;
+                }
+                if (msg.companionAvatarUrl) {
+                    document.getElementById('companionAvatar').src = msg.companionAvatarUrl;
+                    document.getElementById('companionAvatar').alt = msg.companionName || 'Companion';
+                }
+                const guildEl = document.getElementById('guildInfo');
+                if (msg.guildName) {
+                    let html = '<span class="guild-info">';
+                    if (msg.guildIconUrl) {
+                        html += `<img class="guild-icon" src="${msg.guildIconUrl}" alt="" onerror="this.style.display='none'">`;
+                    }
+                    html += msg.channelName ? `${msg.guildName} / ${msg.channelName}` : msg.guildName;
+                    html += '</span>';
+                    guildEl.innerHTML = html;
+                    guildEl.style.display = '';
+                }
+            }
+
             try {
                 const ws = new WebSocket(relayUrl);
                 ws.onopen = () => {
@@ -266,6 +303,9 @@
                 ws.onmessage = (e) => {
                     try {
                         const msg = JSON.parse(e.data);
+                        if (msg.type === 'sessionJoined' || msg.type === 'companionUpdate') {
+                            updateCompanionInfo(msg);
+                        }
                         if (msg.type === 'peerConnected' && !confirmed) {
                             confirmed = true;
                             ws.close();
