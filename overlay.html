@@ -4,110 +4,235 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Axl Overlay - Connect</title>
+    <meta name="description" content="Connect to an Axl Overlay session to see what your AI companion is thinking and saying.">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KCZQG816WQ');
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="resources/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="resources/android-chrome-512x512.png">
+    <link rel="manifest" href="resources/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Sansation:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #1a1b1e;
-            color: #dcddde;
+        .overlay-page {
+            padding: 4rem 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .container {
-            text-align: center;
-            max-width: 480px;
-            padding: 48px 32px;
+
+        .overlay-container {
+            max-width: 540px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-        .logo {
+
+        .overlay-content {
+            background: var(--bg-dark);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px) saturate(20%);
+            -webkit-backdrop-filter: blur(20px) saturate(20%);
+            text-align: center;
+        }
+
+        .overlay-avatar {
             width: 96px;
             height: 96px;
             border-radius: 50%;
-            margin: 0 auto 24px;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            display: block;
         }
-        h1 {
-            font-size: 28px;
-            color: white;
-            margin-bottom: 8px;
+
+        .overlay-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #5dd39e 0%, var(--accent-green) 50%, var(--accent-green-hover) 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease infinite;
         }
-        .subtitle {
-            font-size: 16px;
-            color: #b9bbbe;
-            margin-bottom: 32px;
+
+        .overlay-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
-        .status {
-            background: #2c2d32;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
+
+        .overlay-status {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
-        .status.connecting {
-            border: 1px solid #5865f2;
+
+        .overlay-status.connecting {
+            border: 1px solid var(--accent-green);
         }
-        .status.fallback {
-            border: 1px solid #43a25a;
+
+        .overlay-status p {
+            color: var(--text-secondary);
+            font-size: 0.9375rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
         }
-        .status p {
-            margin-bottom: 12px;
+
+        .overlay-status p:last-child {
+            margin-bottom: 0;
         }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            transition: opacity 0.2s;
+
+        .overlay-status .hint {
+            font-size: 0.8125rem;
+            color: var(--text-muted);
         }
-        .btn:hover { opacity: 0.9; }
-        .btn-primary {
-            background: #5865f2;
-            color: white;
-        }
-        .btn-secondary {
-            background: #43a25a;
-            color: white;
-            margin-top: 12px;
-        }
-        .hidden { display: none; }
-        .spinner {
-            width: 24px;
-            height: 24px;
-            border: 3px solid #4a4b50;
-            border-top-color: #5865f2;
+
+        .overlay-spinner {
+            width: 28px;
+            height: 28px;
+            border: 3px solid var(--bg-darker);
+            border-top-color: var(--accent-green);
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
-            margin: 0 auto 12px;
+            margin: 0 auto 1rem;
         }
+
         @keyframes spin { to { transform: rotate(360deg); } }
+
+        .overlay-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .overlay-actions .btn-download,
+        .overlay-actions .btn-secondary {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .hidden { display: none; }
+
+        .overlay-footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(181, 186, 193, 0.1);
+        }
+
+        .overlay-footer p {
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+            line-height: 1.5;
+        }
+
+        .overlay-footer a {
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .overlay-footer a:hover {
+            color: var(--accent-green-hover);
+        }
+
+        @media (max-width: 768px) {
+            .overlay-content {
+                padding: 2rem 1.5rem;
+                border-radius: 16px;
+            }
+
+            .overlay-title {
+                font-size: 2rem;
+            }
+
+            .overlay-container {
+                padding: 0 1rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="resources/axl.png" alt="Axl" class="logo" onerror="this.style.display='none'">
-        <h1>Axl Overlay</h1>
-        <p class="subtitle">See what your AI companion is thinking and saying</p>
+    <!-- Video Background -->
+    <video class="video-background" id="bgVideo" muted playsinline>
+        <source src="resources/axl.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
 
-        <div id="connecting" class="status connecting">
-            <div class="spinner"></div>
-            <p>Opening Axl Overlay...</p>
-            <p style="font-size: 13px; color: #72767d;">If nothing happens, click below to try again.</p>
-            <a id="deeplink" class="btn btn-primary" href="#">Open Axl Overlay</a>
-        </div>
+    <section class="overlay-page">
+        <div class="overlay-container">
+            <div class="overlay-content">
+                <img src="resources/axl.png" alt="Axl" class="overlay-avatar" onerror="this.style.display='none'">
+                <h1 class="overlay-title">Axl Overlay</h1>
+                <p class="overlay-subtitle">See what your AI companion is thinking and saying</p>
 
-        <div id="fallback" class="status fallback hidden">
-            <p>Don't have Axl Overlay yet?</p>
-            <a href="https://github.com/rblaurent/axl/releases/latest" class="btn btn-secondary">Download Axl</a>
-            <p style="font-size: 13px; color: #72767d; margin-top: 16px;">
-                Install Axl, then click the link from Discord again.
-            </p>
+                <div id="connecting" class="overlay-status connecting">
+                    <div class="overlay-spinner"></div>
+                    <p>Opening Axl Overlay...</p>
+                    <p class="hint">If nothing happens, click below to try again.</p>
+                    <div class="overlay-actions">
+                        <a id="deeplink" class="btn-download" href="#">
+                            <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-6"></path>
+                                <polyline points="15 3 12 0 9 3"></polyline>
+                                <line x1="12" y1="0" x2="12" y2="15"></line>
+                            </svg>
+                            <span>Open Axl Overlay</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="fallback" class="overlay-status hidden">
+                    <p>Don't have Axl yet?</p>
+                    <p class="hint">Install Axl, then click the overlay link from Discord again.</p>
+                    <div class="overlay-actions">
+                        <a href="https://github.com/rblaurent/axl/releases/latest/download/AxlSetup.exe" class="btn-secondary">
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span>Download Axl for Windows</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="overlay-footer">
+                    <p><a href="index.html">Back to Axl</a></p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
     <script>
+        // Video background - play after delay
+        const bgVideo = document.getElementById('bgVideo');
+        setTimeout(() => {
+            bgVideo.play();
+        }, 3000);
+
         const params = new URLSearchParams(window.location.search);
         const hostId = params.get('host');
 
@@ -125,7 +250,7 @@
         } else {
             document.getElementById('connecting').innerHTML =
                 '<p>Invalid or missing host ID.</p>' +
-                '<p style="font-size: 13px; color: #72767d;">Use a link from Discord to connect to a host.</p>';
+                '<p class="hint">Use a link from Discord to connect to a host.</p>';
         }
     </script>
 </body>
