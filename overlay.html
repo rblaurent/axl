@@ -112,7 +112,7 @@
         const hostId = params.get('host');
 
         if (hostId && /^\d{17,20}$/.test(hostId)) {
-            const deepLink = `axl://overlay/${hostId}`;
+            const deepLink = `axloverlay://${hostId}`;
             document.getElementById('deeplink').href = deepLink;
 
             // Try to open the deep link automatically
