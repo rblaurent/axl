@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axl Overlay - Connect</title>
-    <meta name="description" content="Connect to an Axl Overlay session to see what your AI companion is thinking and saying.">
+    <title data-i18n="overlay.meta.title">Axl Overlay - Connect</title>
+    <meta name="description" data-i18n-meta="overlay.meta.description" content="Connect to an Axl Overlay session to see what your AI companion is thinking and saying.">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KCZQG816WQ"></script>
@@ -200,14 +200,14 @@
         <div class="overlay-container">
             <div class="overlay-content">
                 <img id="companionAvatar" src="resources/axl.png" alt="Axl" class="overlay-avatar" onerror="this.style.display='none'">
-                <h1 id="companionTitle" class="overlay-title">Axl Overlay</h1>
+                <h1 id="companionTitle" class="overlay-title" data-i18n="overlay.title">Axl Overlay</h1>
                 <p id="guildInfo" class="overlay-subtitle" style="display:none"></p>
-                <p class="overlay-subtitle">See what your AI companion is thinking and saying</p>
+                <p class="overlay-subtitle" data-i18n="overlay.subtitle">See what your AI companion is thinking and saying</p>
 
                 <div id="connecting" class="overlay-status connecting">
                     <div class="overlay-spinner"></div>
-                    <p>Opening Axl Overlay...</p>
-                    <p class="hint">If nothing happens, click below to try again.</p>
+                    <p data-i18n="overlay.connecting">Opening Axl Overlay...</p>
+                    <p class="hint" data-i18n="overlay.connectingHint">If nothing happens, click below to try again.</p>
                     <div class="overlay-actions">
                         <a id="deeplink" class="btn-download" href="#">
                             <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -215,14 +215,25 @@
                                 <polyline points="15 3 12 0 9 3"></polyline>
                                 <line x1="12" y1="0" x2="12" y2="15"></line>
                             </svg>
-                            <span>Open Axl Overlay</span>
+                            <span data-i18n="overlay.openButton">Open Axl Overlay</span>
                         </a>
                     </div>
                 </div>
 
+                <div id="connected" class="overlay-status hidden">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5" style="margin:0 auto 1rem;display:block"><path d="M20 6L9 17l-5-5"/></svg>
+                    <p style="color:var(--accent-green);font-weight:600;" data-i18n="overlay.connected">Overlay connected!</p>
+                    <p class="hint" data-i18n="overlay.closeTab">You can close this tab.</p>
+                </div>
+
+                <div id="error" class="overlay-status hidden">
+                    <p data-i18n="overlay.invalidHost">Invalid or missing host ID.</p>
+                    <p class="hint" data-i18n="overlay.useDiscordLink">Use a link from Discord to connect to a host.</p>
+                </div>
+
                 <div id="fallback" class="overlay-status hidden">
-                    <p>Don't have Axl yet?</p>
-                    <p class="hint">Install Axl, then click the overlay link from Discord again.</p>
+                    <p data-i18n="overlay.noAxl">Don't have Axl yet?</p>
+                    <p class="hint" data-i18n="overlay.installHint">Install Axl, then click the overlay link from Discord again.</p>
                     <div class="overlay-actions">
                         <a href="https://github.com/rblaurent/axl/releases/latest/download/AxlSetup.exe" class="btn-secondary">
                             <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -230,18 +241,38 @@
                                 <polyline points="7 10 12 15 17 10"></polyline>
                                 <line x1="12" y1="15" x2="12" y2="3"></line>
                             </svg>
-                            <span>Download Axl for Windows</span>
+                            <span data-i18n="overlay.downloadButton">Download Axl for Windows</span>
                         </a>
                     </div>
                 </div>
 
                 <div class="overlay-footer">
-                    <p><a href="index.html">Back to Axl</a></p>
+                    <p>
+                        <a href="index.html" data-i18n="overlay.backToAxl">Back to Axl</a>
+                        <span style="color: var(--text-muted); margin: 0 0.5rem;">·</span>
+                        <span class="language-switcher">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 4px;">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                            <select id="languageSwitcher" style="background: transparent; border: none; color: var(--accent-green); font-weight: 500; cursor: pointer; font-family: inherit; font-size: inherit;">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="it">Italiano</option>
+                                <option value="pt">Português</option>
+                                <option value="pl">Polski</option>
+                            </select>
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
+    <script src="i18n.js"></script>
     <script>
         // Video background - play after delay
         const bgVideo = document.getElementById('bgVideo');
@@ -309,12 +340,9 @@
                         if (msg.type === 'peerConnected' && !confirmed) {
                             confirmed = true;
                             ws.close();
-                            const status = document.getElementById('connecting');
-                            status.innerHTML =
-                                '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="2.5" style="margin:0 auto 1rem;display:block"><path d="M20 6L9 17l-5-5"/></svg>' +
-                                '<p style="color:var(--accent-green);font-weight:600;">Overlay connected!</p>' +
-                                '<p class="hint">You can close this tab.</p>';
-                            status.classList.remove('connecting');
+                            document.getElementById('connecting').classList.add('hidden');
+                            document.getElementById('fallback').classList.add('hidden');
+                            document.getElementById('connected').classList.remove('hidden');
                         }
                     } catch {}
                 };
@@ -330,9 +358,8 @@
             // Safety net: fire deep link after 2s even if WebSocket hasn't connected
             setTimeout(fireDeepLink, 2000);
         } else {
-            document.getElementById('connecting').innerHTML =
-                '<p>Invalid or missing host ID.</p>' +
-                '<p class="hint">Use a link from Discord to connect to a host.</p>';
+            document.getElementById('connecting').classList.add('hidden');
+            document.getElementById('error').classList.remove('hidden');
         }
     </script>
 </body>

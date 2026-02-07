@@ -407,5 +407,24 @@
       "paragraph2": "Wenn du auf Probleme stößt, die hier nicht behandelt werden, schau in den Console-Tab in Axl nach Fehlermeldungen oder melde dich gerne für Hilfe.",
       "paragraph3": "Jetzt geh zocken und lass Axl die Kommentare liefern. Viel Spaß da draußen!"
     }
+  },
+  "overlay": {
+    "meta": {
+      "title": "Axl Overlay - Verbinden",
+      "description": "Verbinde dich mit einer Axl Overlay-Sitzung, um zu sehen, was dein KI-Begleiter denkt und sagt."
+    },
+    "title": "Axl Overlay",
+    "subtitle": "Sieh, was dein KI-Begleiter denkt und sagt",
+    "connecting": "Axl Overlay wird geöffnet...",
+    "connectingHint": "Wenn nichts passiert, klicke unten, um es erneut zu versuchen.",
+    "openButton": "Axl Overlay öffnen",
+    "noAxl": "Du hast Axl noch nicht?",
+    "installHint": "Installiere Axl und klicke dann erneut auf den Overlay-Link in Discord.",
+    "downloadButton": "Axl für Windows herunterladen",
+    "backToAxl": "Zurück zu Axl",
+    "connected": "Overlay verbunden!",
+    "closeTab": "Du kannst diesen Tab schließen.",
+    "invalidHost": "Ungültige oder fehlende Host-ID.",
+    "useDiscordLink": "Verwende einen Link aus Discord, um dich mit einem Host zu verbinden."
   }
 }

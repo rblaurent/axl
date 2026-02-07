@@ -407,5 +407,24 @@
       "paragraph2": "If you run into any issues not covered here, check out the Console tab in Axl for error messages, or feel free to reach out for help.",
       "paragraph3": "Now go game, and let Axl bring the commentary. Have fun out there!"
     }
+  },
+  "overlay": {
+    "meta": {
+      "title": "Axl Overlay - Connect",
+      "description": "Connect to an Axl Overlay session to see what your AI companion is thinking and saying."
+    },
+    "title": "Axl Overlay",
+    "subtitle": "See what your AI companion is thinking and saying",
+    "connecting": "Opening Axl Overlay...",
+    "connectingHint": "If nothing happens, click below to try again.",
+    "openButton": "Open Axl Overlay",
+    "noAxl": "Don't have Axl yet?",
+    "installHint": "Install Axl, then click the overlay link from Discord again.",
+    "downloadButton": "Download Axl for Windows",
+    "backToAxl": "Back to Axl",
+    "connected": "Overlay connected!",
+    "closeTab": "You can close this tab.",
+    "invalidHost": "Invalid or missing host ID.",
+    "useDiscordLink": "Use a link from Discord to connect to a host."
   }
 }

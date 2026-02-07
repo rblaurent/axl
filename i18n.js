@@ -69,12 +69,17 @@ function applyTranslations() {
 
     // Update meta description
     const metaDesc = document.querySelector('[data-i18n-meta]');
-    if (metaDesc && translations.meta?.description) {
-        metaDesc.setAttribute('content', translations.meta.description);
+    if (metaDesc) {
+        const metaKey = metaDesc.getAttribute('data-i18n-meta');
+        const metaTranslation = metaKey ? getNestedTranslation(metaKey) : translations.meta?.description;
+        if (metaTranslation) {
+            metaDesc.setAttribute('content', metaTranslation);
+        }
     }
 
-    // Update document title
-    if (translations.meta?.title) {
+    // Update document title (skip if <title> already has a data-i18n attribute, which is handled above)
+    const titleEl = document.querySelector('title');
+    if (!titleEl?.hasAttribute('data-i18n') && translations.meta?.title) {
         document.title = translations.meta.title;
     }
 }
